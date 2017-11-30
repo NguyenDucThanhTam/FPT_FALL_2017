@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+        <title>FeedBack-Cho chúng tôi ý kiến của bạn</title>
+        <style type="text/css">
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/feedback.css">
+        <!-- Import Bootraps-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!--Import Jquery-->
+  			<link rel="stylesheet" href="css/font-awesome.min.css">
+  			<link rel="stylesheet" href="js/backtotop.js">
+  			<link rel="stylesheet" type="text/css" href="css/backtotop.css">
+    </head>
+    <body>
+        <header>
+            <div id="Head">
+                <div class="col1_H">
+                    <label >
+                        Chào mừng bạn đến với website chuyển Laptop Gaming và GEAR
+                    </label>
+                </div>
+                <div class="col2_H">
+                    <img src="imgs/cart.png" id="icCart" >
+                    <a href="">THANH TOÁN</a>
+                </div>
+            </div>
+            <div id="logo_search" style="text-align: center;">
+                <div id="logo">
+                    <img src="imgs/logo.png" title="Logo Company" id="logoC">
+                </div>
+                <div id="SEARCH">
+                    <form id="formSearch">
+                        <input type="search" id="colSearch" placeholder="Tìm kiếm: Dell Alien ...">
+                        <input type="submit" value="Tìm kiếm" id="colIcSearch"  >
+                    </form>
+                </div>
+                <div id="row2_col3">
+                    <a href="login.html">
+                        <button id="login">ĐĂNG NHẬP</button>
+                    </a>
+                    <label class="hoac">hoặc</label>
+                    <a href="register.html">
+                        <button id="register">ĐĂNG KÝ</button>
+                    </a>
+                </div>
+            </div>
+            <div class="splitter"></div>
+        </header>
+        <nav>
+            <div id="menu">
+                <ul class="nav">
+                    <li><a href="index.html" target="_blank">TRANG CHỦ</a></li>
+                    <li>
+                        <a href="sanpham.html">LAPTOP GAMING</a>
+                        <ul class="subMenu">
+                            <li>
+                                <a href="alien.html">Dell Alienware</a>
+                            </li>
+                            <li>
+                                <a href="rog.html">Asus ROG</a>
+                            </li>
+                            <li>
+                                <a href="msi.html">MSI</a>
+                            </li>
+                            <li>
+                                <a href="grear.html">Phụ kiện GEAR</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.html">LIÊN HỆ</a></li>
+                    <li><a href="feedback.html">GÓP Ý</a></li>
+                </ul>
+            </div>
+           <!--
+	 <div id="support" style="text-align: center;">
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+            </div>
+
+
+           -->
+        </nav>
+        <section>
+            <article id="mapLocation" style="text-align: center">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.267015953536!2d106.68020371424622!3d10.790849661879372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d35939c66f%3A0xe52e3ed732b15272!2zRlBUIFBvbHl0ZWNobmljIEhDTSAtIENhbyDEkeG6s25nIHRo4buxYyBow6BuaA!5e0!3m2!1sen!2s!4v1497928066734" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </article>
+            <aside id="Content">
+                <div id="form_contact">
+                    <label class="titileContact" style="font-weight: bold; font-size: 25px; color: white">
+                        Liên Hệ Với Chúng Tôi
+                    </label>
+                    <div id="feedback">
+                        <a href="https://www.facebook.com/tam.pi.33">
+                            <img src="imgs/fb.png" onmouseover="document.getElementById('ic_fb').src='imgs/fbmau.png' " onmouseout="document.getElementById('ic_fb').src='imgs/fb.png' " id="ic_fb">
+                        </a>
+                        <a href="https://plus.google.com/u/0/collections/">
+                            <img src="imgs/gg.png" onmouseover="document.getElementById('ic_gg').src='imgs/ggmau.png' " onmouseout="document.getElementById('ic_gg').src='imgs/gg.png' " id="ic_gg">
+                        </a>   
+                    </div>
+                    <div id="form" >
+                        <form>
+                                <input type="text" name="" placeholder="Email: "  class="text" required>
+                             <input type="text" name="" placeholder="SĐT: " class="text" required>
+                            <textarea rows="10 "  class="text" placeholder="Ý Kiến Của Bạn: " required></textarea>
+                        <input type="submit" id="sub" value="Hoàn Tất">
+                        </form>
+                    </div>
+                </div>
+            </aside>
+            <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+        </section>
+        <footer>
+            <div class="splitter"></div>
+            <ul>
+                <li>
+                    <div class="icon" data-icon="E"></div>
+                    <div class="text">
+                        <h4>Thông Tin</h4>
+                        <div>Đây là trang Web phục vụ cho Assignment Môn WEB3022. <b>Nghiêm cấm</b> sao chép và mọi hành động sao chép khi chưa được cấp phép <a href="#">Read more</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon" data-icon="a"></div>
+                    <div class="text">
+                        <h4>Bản Quyền</h4>
+                        <div>WEBSITE này được sở hữu bởi Nguyễn Đức Thành Tâm. Mã sinh viên PS05854. Khóa 12.3. Bộ môn LẬP TRÌNH DI ĐỘNG. Trường Cao Đẳng Thực Hành FPT POLYTECHNIC .
+                            Một số hình ảnh sản phẩm được lấy từ trang web <a href="http://www.playzone.vn">PLAYZONE.VN</a>. Xin Chân thành cảm ơn.
+                            <a href="#">Read more</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon" data-icon="s"></div>
+                    <div class="text">
+                        <h4>Liên Hệ</h4>
+                        <div>Mọi thông tin liên hệ xin gửi vào địa chỉ Gmail: tamndtps05854@fpt.edu.vn<a href="#">Read more</a></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="bar-wrap">
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">License</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="copyright">&copy;  8/6/2017 All Rights By MrPi(PS05484)</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

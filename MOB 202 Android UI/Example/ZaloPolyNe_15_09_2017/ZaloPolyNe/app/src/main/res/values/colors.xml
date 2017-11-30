@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="BLACK">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="FONT_COLOR_CALENDAR">#A3A3A3</color>
+    <color name="BG_FONT">#63686C</color>
+    <color name="BG_GEY">#CCCCCC</color>
+    <color name="GREY">#EEEEEE</color>
+    <color name="dark_grey">#757575</color>
+    <color name="BG_DETAIL_IMG">#C0C0C0</color>
+    <color name="BG_EDITTEXT">#EEEEEE</color>
+    <color name="BG_WATERMARK">#141414</color>
+    <color name="BG_ALBUM">#000000</color>
+    <color name="BG_ACTIONBAR">#3C4147</color>
+    <color name="BG_LOGIN">#D9D9D9</color>
+    <color name="BG_HEADER">#3F4549</color>
+    <color name="BG_NEXT">#318FE8</color>
+    <color name="BG_BUTTON_LOGIN">#5B9BD5</color>
+    <color name="BG_BUTTON_LANDING">#6335AF</color>
+
+    <color name="RED">#F23F4E</color>
+    <color name="WHITE">#ffffff</color>
+    <color name="BG_WHITE">#fcf8f7</color>
+    <color name="BLUE">#3633DC</color>
+    <color name="BLUEX">#40b4ff</color>
+    <color name="PURPLE">#af40fb</color>
+    <color name="GREEN">#758a10</color>
+
+    <color name="TEXTVIEW_MAIN">#787878</color>
+
+
+    <!--EDIT INSTANCE-->
+    <color name="colorPrimary">#03a5fa</color>
+    <color name="colorPrimaryDark">#cccccc</color>
+    <color name="colorAccent">#502d7f</color>
+    <color name="color_hrm_demo">#5B9BD5</color>
+
+    <color name="default_text_color">#404040</color>
+
+
+    <color name="hint_text_color">#9a9a9a</color>
+    <color name="activity_login_forgot_pass_text_color">#9a9a9a</color>
+    <color name="error_text_color">#d32f2f</color>
+    <color name="activity_login_under_line_color">@color/text_color_light</color>
+    <color name="forgot_pass_msg_color">#878787</color>
+
+    <color name="dark_grey_light">#e0e0e0</color>
+    <color name="dark_light">#f5f5f5</color>
+    <color name="dashboard_punch_status_bg_color">#4c4c4c</color>
+    <color name="dashboard_punch_status_bg_color_end">#104c4c4c</color>
+    <color name="dashboard_take_photo_msg_color">#b8b8b8</color>
+    <color name="main_event_bg_item_color_dark_now">#502d7f</color>
+    <color name="main_event_bg_item_color_medium_future">#dcd5e5</color>
+    <color name="main_event_bg_item_color_light_past">#f5f5f5</color>
+    <color name="main_event_bg_item_color_grey_no_event">#9a9a9a</color>
+    <color name="main_event_bg_item_color_green_day_off">#e0f8e0</color>
+    <color name="main_event_bg_item_color_red_day_off">#d32f2f</color>
+    <color name="main_event_bg_item_color_yellow">#f4fa58</color>
+    <color name="status_bar_color">#14000000</color>
+    <color name="profile_divider_color">#57000000</color>
+    <color name="btn_delete_bg">#e6e6e6</color>
+    <color name="text_color_dark">#DD000000</color>
+    <color name="text_color_dark_grey">#C6000000</color>
+    <color name="text_color_dark_light">#93000000</color>
+    <color name="text_color_light">#60000000</color>
+    <color name="message_had_read_bg">#1992278f</color>
+    <color name="sub_setting_bg">#fafafa</color>
+    <color name="approve_color">#67a721</color>
+    <color name="reject_color">#ff0018</color>
+    <color name="divider_color">#1E000000</color>
+
+    <!-- color picker -->
+    <color name="pick_blue">#62a8ea</color>
+    <color name="pick_green">#46be8a</color>
+    <color name="pick_cyan">#57c7d4</color>
+    <color name="pick_orange">#f2a654</color>
+    <color name="pick_red">#f96868</color>
+    <color name="pick_grey">#757575</color>
+    <color name="pick_purple">#926dde</color>
+    <color name="tag_yellow">#f4fa58</color>
+
+    <color name="SOLID_RED">#FFF23F4E</color>
+</resources>

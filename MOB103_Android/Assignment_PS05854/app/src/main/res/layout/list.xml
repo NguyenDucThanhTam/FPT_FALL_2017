@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ListActivity">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách sinh viên"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="#FF7F00"
+        android:gravity="center"
+        android:textColor="#F8F8FF"
+        android:textStyle="bold">
+        <TextView
+            android:id="@+id/txtViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STT"
+            android:layout_weight="0.12"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/txtViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã lớp"
+            android:layout_weight="0.34"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên lớp"
+            android:layout_weight="0.51"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lvClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

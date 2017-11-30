@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidSharedPreferencesPs05854</string>
+    <string name="action_settings">Setting</string>
+    <string name="hint">Enter some text here</string>
+    <string name="save">Save</string>
+    <string name="go_to_second_activity">Go to second Activity</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="saved">Saved in SharedPreferences. Go to send Activity</string>
+    <string name="info">After saving, in subsequent launch go to second activity without saving. You will sill see the saved data</string>
+</resources>

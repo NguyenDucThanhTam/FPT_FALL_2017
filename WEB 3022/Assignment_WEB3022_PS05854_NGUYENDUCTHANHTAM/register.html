@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+        <title>Đăng Ký</title>
+        <style type="text/css">
+        .wrap {
+    width:500px;
+    height: auto;
+    margin: auto;
+}
+.avatar img {
+    border-radius: 100px;
+    margin: auto;
+    border:3px solid #fff;
+    display: inline-block;
+}   
+.wrap input {
+    border: none;
+    background: #fff;
+  font-family:Lato ;
+  font-weight:700 ;
+    display: block;
+    height: 40px;
+    outline: none;
+    width: calc(100% - 30px) ;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+}
+
+
+.forgot_link {
+    color: #83afdf ;
+    color: #83afdf;
+    text-decoration: none;
+    font-size: 11px;
+    position: relative;
+    left: 193px;
+    top: -36px;
+}
+.wrap button {
+    width: 100%;
+    border-radius: 7px;
+    background: #b6ee65;
+    text-decoration: center;
+    border: none;
+    color: #51771a;
+     margin-top:-5px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    outline: none;
+    font-size: 13px;    
+    border-bottom: 3px solid #307d63;
+    cursor: pointer;
+}
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Import Bootraps-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--Import Jquery-->
+  			<link rel="stylesheet" href="css/font-awesome.min.css">
+  			<link rel="stylesheet" href="js/backtotop.js">
+  			<link rel="stylesheet" type="text/css" href="css/backtotop.css">
+    </head>
+    <body>
+        <header>
+            <div id="Head">
+                <div class="col1_H">
+                    <label >
+                        Chào mừng bạn đến với website chuyển Laptop Gaming và GEAR
+                    </label>
+                </div>
+                <div class="col2_H">
+                    <img src="imgs/cart.png" id="icCart" >
+                    <a href="">THANH TOÁN</a>
+                </div>
+            </div>
+            <div id="logo_search" style="text-align: center;">
+                <div id="logo">
+                    <img src="imgs/logo.png" title="Logo Company" id="logoC">
+                </div>
+                <div id="SEARCH">
+                    <form id="formSearch">
+                        <input type="search" id="colSearch" placeholder="Tìm kiếm: Dell Alien ..." required="">
+                        <input type="submit" value="Tìm kiếm" id="colIcSearch"  >
+                    </form>
+                </div>
+                <div id="row2_col3">
+                    <a href="login.html">
+                        <button id="login">ĐĂNG NHẬP</button>
+                    </a>
+                    <label class="hoac">hoặc</label>
+                    <a href="register.html">
+                        <button id="register">ĐĂNG KÝ</button>
+                    </a>
+                </div>
+            </div>
+            <div class="splitter"></div>
+        </header>
+        <nav>
+            <div id="menu">
+                <ul class="nav">
+                    <li><a href="index.html" target="_blank">TRANG CHỦ</a></li>
+                    <li>
+                        <a href="sanpham.html">LAPTOP GAMING</a>
+                        <ul class="subMenu">
+                            <li>
+                                <a href="alien.html">Dell Alienware</a>
+                            </li>
+                            <li>
+                                <a href="rog.html">Asus ROG</a>
+                            </li>
+                            <li>
+                                <a href="msi.html">MSI</a>
+                            </li>
+                            <li>
+                                <a href="grear.html">Phụ kiện GEAR</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.html">LIÊN HỆ</a></li>
+                    <li><a href="feedback.html">GÓP Ý</a></li>
+                </ul>
+            </div>
+           <!--
+	 <div id="support" style="text-align: center;">
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+                <div id="transport" class="col">
+                    <img src="imgs/transport.png" height="30" width="auto" class="icon_sp">
+                    <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                </div>
+            </div>
+
+
+           -->
+        </nav>
+        <section style="background-color: black; padding: 30px;">
+            <form>
+                <div class="wrap" style="text-align: center;">
+                	<div class="avatar">
+                    	<img src="imgs/avatar.png" height="90" width="90">
+                	</div>
+                	<input type="text" placeholder="Họ tên: Nguyễn Đức Thành Tâm" required style="border-radius: 7px 7px 0px 0px ">
+
+                	<input type="text" placeholder="Tên đăng nhập: ndtps05854" required>
+                    <input type="password" placeholder="Mật khẩu: ************ " required>
+
+                    <input type="password" placeholder="Nhập lại mật khẩu: ************" required>
+                    <input type="text" placeholder="Địa chỉ email: tamndtps05854@fpt.edu.vn" required style="border-radius: 0px 0px 7px 7px;">
+                    <textarea style="width: calc(100% - 30px); margin: 5px 0px 0px 0px ; border-radius: 5px;
+                    height: 100px;">Bạn phải tuân thủ mọi chính sách đã cung cấp cho bạn trong phạm vi Dịch vụ.
+
+Không được sử dụng trái phép Dịch vụ của chúng tôi. Ví dụ: không được gây trở ngại cho Dịch vụ của chúng tôi hoặc tìm cách truy cập chúng bằng phương pháp nào đó không thông qua giao diện và hướng dẫn mà chúng tôi cung cấp. Bạn chỉ có thể sử dụng Dịch vụ của chúng tôi theo như được luật pháp cho phép, bao gồm cả các luật và quy định hiện hành về quản lý xuất khẩu và tái xuất khẩu. Chúng tôi có thể tạm ngừng hoặc ngừng cung cấp Dịch vụ của chúng tôi cho bạn nếu bạn không tuân thủ các điều khoản hoặc chính sách của chúng tôi hoặc nếu chúng tôi đang điều tra hành vi bị nghi ngờ là sai phạm.
+
+Việc bạn sử dụng Dịch vụ của chúng tôi không có nghĩa là bạn được sở hữu bất cứ các quyền sở hữu trí tuệ nào đối với Dịch vụ của chúng tôi hoặc nội dung mà bạn truy cập. Bạn không được sử dụng nội dung từ Dịch vụ của chúng tôi trừ khi bạn được chủ sở hữu nội dung đó cho phép hoặc được luật pháp cho phép. Các điều khoản này không cấp cho bạn quyền sử dụng bất kỳ thương hiệu hoặc lôgô nào được sử dụng trong Dịch vụ của chúng tôi. Không được xóa, che khuất hoặc thay đổi bất kỳ thông báo pháp lý nào được hiển thị trong hoặc kèm theo Dịch vụ của chúng tôi.
+
+Dịch vụ của chúng tôi hiển thị một số nội dung không phải của Google. Chỉ một mình đối tượng cung cấp sẽ chịu trách nhiệm về nội dung này. Chúng tôi có thể xem xét nội dung để xác định xem nội dung đó có bất hợp pháp hoặc vi phạm chính sách của chúng tôi hay không, và chúng tôi có thể xóa hoặc từ chối hiển thị nội dung mà chúng tôi có lý do chính đáng để tin rằng nội dung đó vi phạm chính sách của chúng tôi hoặc luật pháp. Tuy nhiên, điều đó không nhất thiết có nghĩa là chúng tôi sẽ xem xét nội dung, do vậy bạn đừng cho rằng chúng tôi sẽ làm như vậy.
+
+Liên quan đến việc bạn sử dụng Dịch vụ, chúng tôi có thể gửi cho bạn các thông báo dịch vụ, thông báo quản trị và thông tin khác. Bạn có thể chọn không nhận một số thông báo này.
+
+Một số các Dịch vụ của chúng tôi có sẵn trên các thiết bị di động. Không sử dụng các Dịch vụ đó theo cách khiến bạn bị mất tập trung và ngăn cản bạn tuân thủ các luật về an toàn hoặc giao thông.</textarea>
+                    <label style="width: auto; text-align: left; float: left;margin: 0px 10px 0px 10px; ">Bạn đồng ý với điều khoản chính sách người dùng </label> 
+                    <input type="checkbox" required style="width:  auto; float: left;" >
+                	<button>Đăng nhập</button>
+            	</div>
+            </form>
+  
+    <script src="js/index.js"></script>
+        </section>
+        <footer>
+            <div class="splitter"></div>
+            <ul>
+                <li>
+                    <div class="icon" data-icon="E"></div>
+                    <div class="text">
+                        <h4>Thông Tin</h4>
+                        <div>Đây là trang Web phục vụ cho Assignment Môn WEB3022. <b>Nghiêm cấm</b> sao chép và mọi hành động sao chép khi chưa được cấp phép <a href="#">Read more</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon" data-icon="a"></div>
+                    <div class="text">
+                        <h4>Bản Quyền</h4>
+                        <div>WEBSITE này được sở hữu bởi Nguyễn Đức Thành Tâm. Mã sinh viên PS05854. Khóa 12.3. Bộ môn LẬP TRÌNH DI ĐỘNG. Trường Cao Đẳng Thực Hành FPT POLYTECHNIC .
+                            Một số hình ảnh sản phẩm được lấy từ trang web <a href="http://www.playzone.vn">PLAYZONE.VN</a>. Xin Chân thành cảm ơn.
+                            <a href="#">Read more</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon" data-icon="s"></div>
+                    <div class="text">
+                        <h4>Liên Hệ</h4>
+                        <div>Mọi thông tin liên hệ xin gửi vào địa chỉ Gmail: tamndtps05854@fpt.edu.vn<a href="#">Read more</a></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="bar-wrap">
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">License</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="copyright">&copy;  8/6/2017 All Rights By MrPi(PS05484)</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

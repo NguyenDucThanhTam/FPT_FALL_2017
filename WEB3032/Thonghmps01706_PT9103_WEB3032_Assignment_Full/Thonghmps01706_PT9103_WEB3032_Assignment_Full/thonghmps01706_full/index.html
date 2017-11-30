@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Cinema - Thonghmps01706" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Cinema - Thonghmps01706</title>
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+        
+        <script src="js/slide.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
+<script type="text/javascript">
+
+			$(function() {
+				$('#menu').mmenu({
+					onClick: {
+						preventDefault: true
+					}
+				}, {
+					offCanvas: {
+						pageSelector: 'div[data-role="page"]:first'
+					}
+				});
+
+				$('#menu a').on(
+					'click',
+					function()
+					{
+						var _t = this;
+						$('#menu').one(
+							'closed.mm',
+							function()
+							{
+								$.mobile.changePage( _t.href, {
+									transition: 'slide'
+								});
+							}
+						);
+					}
+				);
+			});
+
+			$(document).on(
+				'pageshow',
+				function( e, ui )
+				{
+					$('#menu').trigger( 'setPage', [ $(e.target) ] );
+					$('#menu a').each(
+						function()
+						{
+							if ( $.mobile.path.parseUrl( this.href ).href == window.location.href )
+							{
+								$(this).trigger( 'setSelected.mm' );
+							}
+						}
+					);
+				}
+			);
+
+			
+		</script>
+                <script type="text/javascript">
+	var anhAr = [];
+	var currentIndex = 0;
+	var run;
+	
+	var anhArgt = [];
+	var currentIndexgt = 0;
+	var rungt;
+	
+	function loadAnh() {
+		for (var i = 0; i < 4; i++) {
+			anhAr[i] = new Image();
+			anhAr[i].src = "img/" + i + ".jpg";
+		}
+		play();
+		
+	}
+	function auto() {
+		currentindex = Math.round(Math.random() * 4);
+		document.getElementById("hinh").src = anhAr[currentindex].src;
+	}
+	function play() {
+		run = setInterval("auto()", 1000);
+	}
+</script>
+
+<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+	function check_form()
+
+		{
+
+		//Khai báo các biến để lấy giá trị từ người dùng khi họ nhập dữ liệu vào form.
+
+		hoten=document.form.txthovaten.value;
+
+		mail=document.form.txtmail.value;
+
+		diachi=document.form.txtdiachi.value;
+
+		dienthoai=document.form.txtdienthoai.value;
+
+		noidung=document.form.textnoidung.value;
+
+		
+
+		//Khai báo các biến để thông báo lỗi khi có lỗi xảy ra ^^!
+
+		var loiht=document.getElementById("idht");
+
+		var loimail=document.getElementById("idmail");
+
+		var loidc=document.getElementById("iddc");
+
+		var loidt=document.getElementById("iddt");
+
+		var loind=document.getElementById("idnd");
+
+		//Check ô tên đăng nhập
+
+		if(hoten=="") //Nếu họ tên bỏ trống không nhập gì hết
+
+		{			
+
+			//alert("SS");
+
+			loiht.innerHTML="Chưa nhập tên của bạn!"; //Xuất ra dòng thông báo lỗi nếu họ tên bỏ trống.
+
+			document.form.txthovaten.focus(); //Đặt lại tiêu điểm (Tức là con trot chuột ấy) vào ô bị lỗi
+
+			
+
+			return false; //Quay lại check tiếp khi nhận đc tiêu điểm .
+
+		}
+
+		loiht.innerHTML=""; //Xóa dòng thông báo lỗi khi nhập đúng.
+
+		
+		//check mail cũng tương tự y hệt như trên
+
+		dangmail= /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,4}$/ //Tạo biểu thức quy tắc (tức là định dạng 1 mail nó như thế nào).
+
+		kq2=dangmail.test(mail); //Kiểm tra mail mà người dùng nhập vào.
+
+		if(mail=="") //Nếu mail bỏ trống
+
+		{	
+
+			loimail.innerHTML="Chưa nhập mail!";
+
+			document.form.txtmail.focus();
+
+			return false;
+
+		
+
+		}
+
+		loimail.innerHTML="";
+
+		if(kq2==false)
+
+		{			
+
+			loimail.innerHTML="Sai đinh dạng mail (abc@yahoo.com)!";
+
+			document.form.txtmail.focus();
+
+			return false;
+
+		}
+
+		loimail.innerHTML="";
+		
+		if(diachi=="") // nội dung ô địa chỉ không được để trống
+
+		{
+
+			loidc.innerHTML="Đia chỉ không được bỏ trống!";
+
+			document.form.txtdiachi.focus();
+
+			return false;
+
+		}
+
+		loidc.innerHTML="";
+
+		if(dienthoai=="") // nội dung ô điện thoại không được để trống
+
+		{
+
+			loidt.innerHTML="Chưa nhập số điện thoại!";
+
+			document.form.txtdienthoai.focus();
+
+			return;
+
+		}
+
+		loidt.innerHTML="";
+
+		
+
+		if(isNaN(dienthoai)) // nội dung điền vào text box này phải là số
+
+		{
+
+			loidt.innerHTML="Bạn phải nhập vào một số!";
+
+			document.form.txtdienthoai.focus();
+
+			return false;
+
+		}
+
+		loidt.innerHTML="";
+
+		if(noidung=="") // check lỗi rỗng phần nội dung
+
+		{
+
+			loind.innerHTML="Nội dung không được bỏ trống!";
+
+			document.form.textnoidung.focus();
+
+			return false;
+
+		}
+
+		loind.innerHTML="";
+
+		document.form.submit();
+		// hiện form góp ý thành công
+		window.confirm("Xin cám ơn bạn đã góp ý cho trang thư viện!");
+
+		}
+
+		</script>
+        
+        
+        <style type="text/css">
+#idht, #idmail, #iddc, #iddt, #idnd, #e_mk, #e_nlmk, #nlidmail, #e_mxn {
+	color: #ea8f23; padding:0; margin:0; line-height:130%}
+    
+    
+
+</style>
+</head>
+	<body onLoad="loadAnh()">
+		<div data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+		    <img src="img/logo.png" >
+            </div>
+			<div class="content" data-role="content">
+            <div class="sd"><img src="img/0.jpg" id="hinh"></div>
+            <div class="flim">
+            
+              <a href="index.html#pagep1"><img src="img/f1.jpg"></a>
+              <a href="index.html#pagep5"><img src="img/f2.jpg"></a>
+              <a href="index.html#pagep3"><img src="img/f3.jpg"></a></div>
+              <a href="index.html#page2"><div class="mhix"><div class="icon"></div> PHIM THÁNG 9</div></a>
+               <a href="index.html#page2"><div class="mhix"><div class="icon"></div> PHIM THÁNG 8</div></a>
+               <a href="index.html#page2"><div class="mhix"><div class="icon"></div> PHIM THÁNG 7</div></a>
+			<div class="footer">
+            <table class="cs" border="0">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td class="check"><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+               
+          </div>
+
+			</div>
+		</div>
+
+		<div id="page2" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+				<div class="phim">
+
+                <h1>GIỚI THIỆU PHIM ẢNH</h1>
+            
+            
+            <div class="box">
+            <div class="hinh"><a href="index.html#pagep1"><img src="img/Minions_(2015)_Poster.png"></a></div>
+            <div class="dulieu">
+            <a href="index.html#pagep1"><h2>
+Minions</h2>
+            </a>
+            Vốn là một sinh vật đơn bào màu vàng tồn tại từ thời cổ đại, minions tiến hóa dần qua các thời kỳ với một mục đích sống duy nhất: phụng sự kẻ ác nhân đáng ghét nhất...</div>
+            <div class="clear"></div></div>
+            
+            <div class="box1">
+            <div class="hinh"><a href="index.html#pagep2"><img src="img/big-hero-6-bot-fight-header.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#pagep2"><h2>Người Hùng 6</h2>
+            </a>
+            Một cuộc phiêu lưu hành động về robot thần đồng Hiro Hamada....</div>
+            <div class="clear"></div></div>
+            
+                        <div class="box">
+            <div class="hinh"><a href="index.html#pagep3"><img src="img/The-Avengers-Age-of-Ultron1.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#pagep3"><h2>Avengers: Age of Ultron</h2>
+            </a>
+            Mệt mỏi vì công việc của một nhà sáng chế, doanh nhân và cả trách nhiệmi...</div>
+            <div class="clear"></div></div>
+            
+            
+                        <div class="box1">
+            <div class="hinh"><a href="index.html#pagep4"><img src="img/Logo_Jurassic_World.png"></a></div>
+            <div class="dulieu">
+            <a href="index.html#pagep4"><h2>Jurassic World</h2>
+            </a>
+            Phim sẽ xảy ra 22 năm sau các sự kiện của phần “Jurassic Park”...</div>
+            <div class="clear"></div></div>
+            
+            
+                        <div class="box">
+            <div class="hinh"><a href="index.html#pagep5"><img src="img/1-1416469462293.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#pagep5"><h2>THE HUNGER GAMES</h2></a>
+            Lionsgate vừa qua mới công bố hãng đang kết hợp...</div>
+            <div class="clear"></div></div>
+
+            
+            <div class="clear"></div>
+            
+			</div>
+            			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+		</div>
+        </div>
+
+		<div id="page3" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+               
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+			<div class="tintuc">
+            <h1>TIN TỨC ĐIỆN ẢNH</h1>
+            
+            
+            <div class="box">
+            <div class="hinh"><a href="index.html#paget1"><img src="img/iron_man.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#paget1"><h2>TƯƠNG LAI IRON MAN 4</h2></a>
+            Mới vừa năm ngoái Robert Downey Jr...</div>
+            <div class="clear"></div></div>
+            
+            <div class="box1">
+            <div class="hinh"><a href="index.html#paget2"><img src="img/1-1416469462293.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#paget2"><h2>THE HUNGER GAMES</h2></a>
+            Lionsgate vừa qua mới công bố hãng đang kết hợp...</div>
+            <div class="clear"></div></div>
+            
+                        <div class="box">
+            <div class="hinh"><a href="index.html#paget3"><img src="img/Terminator_Genisys_1.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#paget3"><h2>TERMINATOR GENISYS</h2></a>
+            Bức ảnh này được đăng tải trên trang Twitter cá nhân...</div>
+            <div class="clear"></div></div>
+            
+            
+                        <div class="box1">
+            <div class="hinh"><a href="index.html#paget4"><img src="img/y.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#paget4"><h2>TOY STORY 4</h2></a>
+            Toy Story hiện đang trong giai đoạn sản xuất...</div>
+            <div class="clear"></div></div>
+            
+            
+                        <div class="box">
+            <div class="hinh"><a href="index.html#paget5"><img src="img/520.jpg"></a></div>
+            <div class="dulieu">
+            <a href="index.html#paget5"><h2>HƯƠNG GA DJ PARTY</h2></a>
+            Các DJ hàng đầu Việt Nam như Mike Hào...</div>
+            <div class="clear"></div></div>
+
+            
+            <div class="clear"></div>
+            
+			</div>
+            			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+               
+			</div>
+            
+		</div>
+        
+	<div id="page4" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="gioithieu">
+			  <h1>GIỚI THIỆU CINEMA</h1>                  
+				  <p> Cinema là website dành cho các thành viên cộng đồng mê phim chiếu rạp tại                      VN. Với mong muốn góp phần vào sự phát triển của điện ảnh Việt Nam và đưa thông                      tin về phim chiếu rạp đến nhanh và gần với công chúng hơn, Cinema đã tiên                      phong trong việc truyền tải các thông tin mới nhất và cung cấp lịch chiếu nhanh                      nhất tại tất cả các rạp trên lãnh thổ Việt Nam.</p>
+Tìm kiếm Nhanh chóng &amp; Dễ dàng
+<p> Cinema còn cung cấp ứng dụng Tra cứu lịch   chiếu trên điện thoại di động Smartphone. Chỉ một vài thao tác đơn giản,   bạn có thể kiểm tra được lịch chiếu thật nhanh chóng và dễ dàng. Ứng   dụng còn giúp bạn tìm ra cụm rạp chiếu phim gần mình nhất cũng như khả   năng kết nối linh hoạt trong việc đặt vé online tại rạp bạn yêu thích.</p>
+<img src="http://phimchieurap.vn/images/aboutus2.jpg" width="210">
+<p> <img src="http://phimchieurap.vn/images/offline.jpg" width="210"></p>
+Cầu nối thiết thực
+<p> Không dừng lại ở đó, Cinema cũng thường xuyên tổ chức những buổi offline                      dành cho các thành viên của mình – là những người yêu thích, đam mê điện ảnh, có                      thể kể đến như Offline cho phim G.I.Joe, Iron Man 3, Fast &amp; Furious 6, Thế Chiến                      Z. Không chỉ mang đến những suất chiếu phim bom tấn "cực đỉnh" dành cho các thành                      viên, thông qua những buổi offline này, Cinema còn tạo ra cầu nối giao                      lưu với tất cả các thành viên. <br>
+  <br>
+  Với mục tiêu không chỉ gặp nhau chia sẻ về đam mê, bình luận về phim ảnh trên website,                      fanpage Phimchieurap mà các thành viên còn được gặp nhau ngoài đời để thật sự hiểu                      nhau hơn trong cộng đồng những người mê phim chiếu rạp. Và trong tháng 7/2013, cộng                      đồng Cinema sẽ tiếp tục thực hiện buổi offline lần thứ 5 với một bộ phim                      bom tấn rất đặc sắc trình chiếu trong chương trình.</p>
+Đánh giá &amp; Chia sẻ
+<p> Jonny Trí Nguyễn chia sẻ : "Khi biết có một cộng đồng những thành viên mê phim chiếu                      rạp như vậy, chúng tôi muốn đến để cùng chia sẻ với các bạn niềm đam mê chung về                      điện ảnh… "</p>
+            </div>
+                               			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div></div>
+		</div>
+        
+	<div id="page5" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+           
+            <div class="lienhe">
+             <h1>LIÊN HỆ</h1><strong>Đơn vị chủ quản:</strong> Công ty TNHH Truyền Thông &amp; Giải Trí Multi Touch<br>
+              <strong>Chịu trách nhiệm:</strong> Hoàng Minh Thông<br>
+              <strong>Giấy phép ICP</strong> số 62/GP-ICP-STTTT do Sở Thông tin và Truyền thông TPHCM cấp ngày 20/08/2013<br>
+              <strong>Địa chỉ:</strong> Lầu 6 - HAN Building, 301 Trần Hưng Đạo, P. Cô Giang, Q.1, TPHCM<br>
+              <strong>Email:</strong> <a href="http://cinema-ps01706.tk">info@cinema.tk</a><br>
+              <strong>Website:</strong> <a href="http://cinema-ps01706.tk">http://cinema-ps01706.tk</a>
+              OR
+              <a href="http://m.cinema-ps01706.tk">http://m.cinema-ps01706.tk</a>
+              <h1>Thông tin góp ý</h1>
+              <form id="formlienhe" name="form" method="post" action="">
+  
+  <table  border="0" >
+
+	<tr>
+
+        <td >Tên của bạn : </td>
+    </tr>
+    <tr>
+        <td ><label>
+
+        <input name="txthovaten" type="text" id="txthovaten"  />
+
+        <span id="idht"></span></label></td>
+
+	</tr>
+
+    <tr>
+
+        <td>Email : </td>
+    </tr>
+    <tr>
+        <td><input name="txtmail" type="text" id="txtmail"  />
+
+        <span id="idmail"></span></td>
+
+    </tr>
+
+    <tr>
+    </tr>
+    <tr>
+        <td>Địa chỉ:</td>
+    </tr>
+    <tr>
+        <td><input name="txtdiachi" type="text" id="txtdiachi"  />
+
+       	<span id="iddc"></span></td>
+
+    </tr>
+
+    <tr>
+    </tr>
+    <tr>
+        <td>Điện thoại : </td>
+    </tr>
+    <tr>
+        <td><input name="txtdienthoai" type="text" id="txtdienthoai"  />
+
+        	<span id="iddt"></span></td>
+
+    </tr>
+
+    <tr>
+    </tr>
+    <tr>
+        <td>Nội dung : </td>
+    </tr>
+    <tr>
+        <td>
+
+        <textarea name="textnoidung" cols="55" rows="10" id="textnoidung"></textarea>
+
+        <span id="idnd"></span>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td><label>
+          <div data-role="controlgroup" data-type="horizontal">
+          <input name="btguitongtin" type="submit" id="btguitongtin" value="Gửi" onclick="return check_form()" />
+          <input name="btxoadangki" type="reset" id="btxoadangki" value="Làm lại" />
+          </div>
+          </label></td>
+
+    </tr>
+
+</table>
+
+</form>
+
+<iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=301+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam&amp;aq=0&amp;oq=301+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,76.552734&amp;ie=UTF8&amp;hq=&amp;hnear=301+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+C%E1%BA%A7u+Kho,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam&amp;t=m&amp;z=14&amp;ll=10.762606,106.690689&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=vi&amp;geocode=&amp;q=301+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam&amp;aq=0&amp;oq=301+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,76.552734&amp;ie=UTF8&amp;hq=&amp;hnear=301+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+C%E1%BA%A7u+Kho,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam&amp;t=m&amp;z=14&amp;ll=10.762606,106.690689" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small>
+</div>	
+<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+	<div id="paget1" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>TƯƠNG LAI IRON MAN 4 SẼ THẾ NÀO</h1>
+            <img src="img/IronMan_by_antirobotic.jpg">
+<div>Mới vừa năm ngoái Robert Downey Jr. kí   hợp đồng gia hạn với hãng Marvel, cam kết có mặt trong cả hai bộ phim   bom tấn Avengers: Age of Ultron và Avengers 3; nhưng lại không nói gì về   kế hoạch cho Iron Man 4. Người ta cho rằng đây là dấu hiệu phim về Tony   Stark sẽ dừng lại ở con số 3. Ngày càng xuất hiện nhiều suy đoán cho   rằng đây là sự thật.</div>
+            <div>
+            <img src="img/iron_man.jpg"><br>
+  &ldquo;Không, chẳng có kế hoạch nào cho phần 4 của Iron Man cả&rdquo;, đó là câu trả   lời thẳng thừng của Downey Jr. với tờ Variety khi được hỏi về tương lai   đầy tiềm năng của loạt truyện nhượng quyền nổi tiếng. Nam diễn viên   hiện đang có mặt tại Liên hoan phim quốc tế Toronto quảng bá cho bộ phim   mới The Judge, bộ phim kịch tính đầu tiên kể từ tác phẩm The Soloist   năm 2009.<br>
+              Đối với những ai đã biết cách tương thảo hợp đồng giữa Robert Downey Jr.   và hãng Marvel hẳn cũng sẽ không ngạc nhiên nếu nam diễn viên không kí   tiếp hợp đồng cho phần 3. Từ lâu, Robert Downey Jr. đã có ưu thế trong   các cuộc đàm phán với công ty- cực điểm là khi anh ra giá 50 triệu đô   cho phần diễn xuất của mình trong The Avengers, đó là con số anh khẳng   định. Chiến thuật cứng rắn đã làm cho ứng viên giải Oscar tưởng chừng   không có mặt trong The Avengers 2; biên kịch và đạo diễn Joss Whedon đã   phát biểu ông không thế làm bộ phim vắng mặt Robert Downey Jr.. Cũng   không quá khó để hiểu tại sao Marvel không tiếp tục thương lượng cho   Iron man 4.</div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+	<div id="paget2" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>THE HUNGER GAMES RA MẮT VÀO NĂM 2016</h1>
+            <img src="img/hungergamesmocktrailer.jpg" >
+<div>Lionsgate vừa qua mới công bố hãng   đang kết hợp với công ty truyền thông Hà Lan Image Nation và công ty tụ   sở Mỹ Triangular Entertainment, để mang The Hunger Games lên sân khấu   với nhiều dàn dựng sáng tạo và những thiết bị sân khấu tối tân nhất. The   Hunger Games phiên bản nhà hát sẽ ra mắt vào mùa he năm 2016 trong một   nhà hát mới xây dựng cạnh sân vận động Wembley tại Luân Đôn.</div>
+            <div>
+            <img src="img/1-1416469462293.jpg" ><br>
+              Tác phẩm nghệ thuật sẽ được dẫn dắt bởi nhà sản xuất từng đoạt giải   Broadway, Robin de Levita cũng là người sáng lập Imagine Nation, cùng   với người sáng lập huyền thoại Harvey Goldsmith, Warren Adams từ   Triangular Entertainment và Brandon Victor Dixon từ WalkRunFly   Productions.</div>
+            <div>
+            <br>
+              De Levita gần đây đã sáng tạo ra 2 phương thức trình diễn đột phá cho 2   nhà sản xuất tại Hà Lan. &ldquo;Soldier of Orange&rdquo; vở nhạc kịch ăn khách Hà   Lan, đã bán hết vé từ 4 năm về trước. Người xem ngồi 360 độ khắp nhà hát   để thưởng thức những giây phút khó quên. &ldquo;Anne&rdquo; dựa trên &ldquo;The Diary of   Anne Frank&rdquo; ra mắt vào thang 5/2014 tại Amsterdam cũng đã nhận được   những lời tán dương nồng nhiệt từ khán giả toàn cầu.</div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+	<div id="paget3" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>MỚI CÁU CỦA ARNOLD SCHWARZENEGGER</h1>
+            <img src="img/terminator-genisys-600.jpg"  > Bộ phim Terminator Genisys do hãng Paramount Pictures sản xuất, mới đây   vừa xuất hiện một hình ảnh đặc tả chân dung của lão tướng Arnold   Schwarzenegger trong tạo hình kẻ hủy diệt T-800. Bức ảnh này được đăng   tải trên trang Twitter cá nhân của cClinkenbeard (fan hâm mộ của   Arnold).
+            
+            <div><img src="img/Terminator_Genisys_5.jpg"  ><br>
+              Trước đó Arnold Schwarznegger đã tiết lộ tạo hình về nhân vật kẻ hủy   diệt T800 trong phần mới này: &ldquo;Bên trong là một cỗ máy, một hộp sọ bằng   kim loại. Nhưng ở bên ngoài là thịt da của con người. Bởi vậy, da thịt   của kẻ hủy diệt cũng bị lão hóa theo năm tháng, giống như con người,   nhưng với một tốc độ chậm hơn.&rdquo;<br>
+            </div>
+            <div></div>
+            <img src="img/Terminator_Genisys_1.jpg" >
+<div>Do đó đội ngũ thực hiện kỹ xảo của   Terminator: Genesis cũng sẽ bớt đi được một phần lớn công việc, còn khán   giả sẽ được chứng kiến một kẻ hủy diệt già nua nhưng vẫn đầy phong độ.</div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+        
+   	<div id="paget4" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>TOY STORY 4 SẼ ĐẾN VỚI KHÁN GIẢ VÀO NĂM 2017</h1>
+            <img src="img/y.jpg" >
+<div>sau  một thời gian dài im ắng, tại một   cuộc hội nghị vừa qua, chủ tịch Walt Disney và CEO Bob Iger đã tiết lộ   Toy Story hiện đang trong giai đoạn sản xuất. John Lasseter, đạo diễn   của bộ phim đầu tiên và là người chịu trách nhiệm đứng đầu khâu sáng tạo   cho cả 3 studio trực thuộc hãng Disney, sẽ là đạo diễn phần 4.<br>
+            </div>
+            <div></div>
+            <div>Dù rằng tại thời điểm này chưa có   thông tin chính thức, nhưng khả năng lớn Toy Story 4 sẽ chào đón sự trở   lại của Tom Hanks, Tim Allen, Joan Cusack và những tài năng khác đã từng   tham gia lồng tiếng cho bản phim nhượng quyền được yêu thích này.</div>
+            <img src="img/aa.jpg" >
+<div>Toy Story 3, pháy hành vào năm 2010,   thu về hơn 1 tỉ đô trên toàn cầu. Là nguồn cảm hứng cho series truyền   hình ăn theo, tiếp nối cây chuyện về những món đồ chơi của Andy ra mắt   vào năm ngoái. Trong khi đó phiên bản truyền hình Toy Story That Time   Forgot được kế hoạch vào mùa đông năm nay 02/12.</div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+	<div id="paget5" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>“HƯƠNG GA DJ PARTY” – BỮA TIỆC ÂM NHẠC</h1>
+            <div>Sau thành công về doanh thu và nhận phản ứng tích cực từ khán giả,   đoàn phim &ldquo;Hương Ga&rdquo; và công ty TNA Entertaiment quyết định tổ chức   chuỗi chương trình "Huong Ga DJ Party" tri ân khán giả vào đêm 18.11   (tại sân Lan Anh, TPHCM),</div>
+            <div> </div>
+            <div>Các DJ hàng đầu Việt Nam như Mike Hào, Kelly Như, Nam Lê..., các ca   sỹ Phương Thanh, Ưng Hoàng Phúc, Phạm Hồng Phước… cùng dàn diễn viên   phim như Trương Ngọc Ánh, Kim Lý, Chi Bảo, Trang Trần, Harry Lu, Hiếu   Nguyễn… sẽ trình diễn một bữa tiệc kết hợp giữa âm nhạc và điện ảnh hứa   hẹn mang đến những bất ngờ thú vị.</div>
+            <div> </div>
+            <div><img alt="" src="img/520.jpg"></div>
+            <div> </div>
+            <div> "Huong Ga DJ Party" cũng là một trong những hoạt động hướng tới   cộng đồng, tại các đêm tổ chức tại 3 địa điểm nói trên, đoàn phim sẽ   trích một phần doanh thu từ bộ phim &ldquo;Hương Ga&rdquo; để gửi tới các quỹ khuyến   học trên địa bàn các thành phố thông qua đại diện cơ quan Thành Đoàn   tại địa phương.</div>
+            <div><br>
+              Tham gia chương trình sẽ có sự xuất hiện của toàn bộ diễn viên đã tham   gia diễn xuất trong tác phẩm điện ảnh được chờ đợi nhất năm 2014 - bộ   phim được gắn mắc "bom tấn" của Việt Nam - Hương Ga. Với những cái tên   như Trương Ngọc Ánh, Trang "Khàn", Phương Thanh, Ưng Hoàng Phúc, Kim Lý,   Cường Ngô, Hiếu Nguyễn, Harry Lu, Cao Lâm Viên, Vũ Mạnh Hiệp, Hà Việt   Dũng, v.v... hứa hẹn sẽ mang đến cho khán giả những tiết mục biểu diễn   đặc biệt chưa từng xuất hiện.</div>
+            <div><br>
+              "Huong Ga's DJ Party" hứa hẹn sẽ là một đêm nhạc sôi động - trẻ trung -   cuốn hút và đặc biệt hấp dẫn với hàng ngàn phần thưởng cho khán giả   tham gia đêm hội, đặc biệt là những chiếc điện thoại di động đời mới   nhất.</div>
+            <div> </div>
+            <div><strong>Mỗi khán giả chỉ cần dùng một cuống vé (cùi vé) xem phim   &ldquo;Hương Ga&rdquo; để thay vé vào cửa &ldquo;Hương Ga DJ Party&rdquo;. Dự kiến sẽ có khoảng   10.000 khán giả tham dự bữa tiệc âm nhạc – điện ảnh &ldquo;cực chất&rdquo; này tại    TP. HCM.</strong></div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+
+<div id="pagep1" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>
+            <iframe class="youtube-player" type="text/html" width="100%" height="auto" src=http://www.youtube.com/embed/eisKxhjBnZ0?rel=0 frameborder="0" allowfullscreen></iframe></h1>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><span> * </span>Tên phim:</div>
+              <div class="ui-block-b">Minions</div>
+               <div class="ui-block-a"><span> * </span>Năm phát hành:</div>
+              <div class="ui-block-b">2015</div>
+               <div class="ui-block-a"><span> * </span>Đánh giá phim:</div>
+              <div class="ui-block-b">Chưa có đánh giá</div>
+               <div class="ui-block-a"><span> * </span>Diễn viên:</div>
+              <div class="ui-block-b">Sandra Bullock, Steve Carell, Jon Hamm, Katy Mixon</div>
+              <div class="ui-block-a"><span> * </span>Thể loại:</div>
+              <div class="ui-block-b">Hoạt hình</div>
+              <div class="ui-block-a"><span> * </span>Quốc gia:</div>
+              <div class="ui-block-b">Âu-Mỹ</div>
+            </div>
+            <div></div>
+            <div>
+              <div>
+                <h2>Minions</h2>
+              </div>
+              <div itemprop="description">
+                <div id="mCSB_1">
+                  <div> Vốn là một sinh vật đơn bào màu vàng tồn tại từ thời cổ   đại, minions tiến hóa dần qua các thời kỳ với một mục đích sống duy   nhất: phụng sự kẻ ác nhân đáng ghét nhất. Thế nhưng, chủ nhân của chúng –   từ khủng long bạo chúa tới Napoleon – đều lần lượt biến mất theo thời   gian. Điều này đã khiến các minions rơi vào trạng thái u sầu, phiền muộn. Chỉ tới khi anh chàng Kevin cùng hai minions tinh quái khác là Stuart và Bob lên đường khám phá thế giới, tia hy vọng về một chủ nhân xứng đáng mới dần lóe lên. </div>
+                </div>
+              </div>
+            </div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+<div id="pagep2" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>
+            <iframe class="youtube-player" type="text/html" width="100%" height="auto" src=http://www.youtube.com/embed/z3biFxZIJOQ?rel=0 frameborder="0" allowfullscreen></iframe></h1>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><span> * </span>Tên phim:</div>
+              <div class="ui-block-b">Người Hùng 6</div>
+               <div class="ui-block-a"><span> * </span>Năm phát hành:</div>
+              <div class="ui-block-b">2014</div>
+               <div class="ui-block-a"><span> * </span>Đánh giá phim:</div>
+              <div class="ui-block-b">9.67 (239 lượt)</div>
+               <div class="ui-block-a"><span> * </span>Diễn viên:</div>
+              <div class="ui-block-b">Jamie Chung, T.J. Miller, Maya Rudolph</div>
+              <div class="ui-block-a"><span> * </span>Thể loại:</div>
+              <div class="ui-block-b">Hoạt hình</div>
+              <div class="ui-block-a"><span> * </span>Quốc gia:</div>
+              <div class="ui-block-b">Âu-Mỹ</div>
+            </div>
+            <div></div>
+            <div>
+              <div>
+                <h2>Big Hero 6</h2>
+              </div>
+              <div itemprop="description">
+                <div id="mCSB_1">
+                  <div>Một cuộc phiêu lưu hành động về robot thần đồng Hiro Hamada, người phát   hiện một âm mưu tội phạm đe dọa phá hủy thành phố công nghệ cao của San   Fransokyo. Với sự giúp đỡ của đồng đội thân thiết nhất của mình là   Baymax, Hiro gia nhập lực lượng với một đội ngũ toàn những tay lính mới   lần đầu thực hiện nhiệm vụ cứu thành phố của họ. </div>
+                </div>
+              </div>
+            </div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+        
+        
+<div id="pagep3" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>
+            <iframe class="youtube-player" type="text/html" width="100%" height="auto" src=http://www.youtube.com/embed/tmeOjFno6Do?rel=0 frameborder="0" allowfullscreen></iframe></h1>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><span> * </span>Tên phim:</div>
+              <div class="ui-block-b">Avengers: Age of Ultron</div>
+               <div class="ui-block-a"><span> * </span>Năm phát hành:</div>
+              <div class="ui-block-b">2015</div>
+               <div class="ui-block-a"><span> * </span>Đánh giá phim:</div>
+              <div class="ui-block-b">Chưa có đánh giá</div>
+               <div class="ui-block-a"><span> * </span>Diễn viên:</div>
+              <div class="ui-block-b">Scarlett Johansson, Aaron Taylor-Johnson, Robert Downey Jr., Chris Hemsworth, Chris Evans</div>
+              <div class="ui-block-a"><span> * </span>Thể loại:</div>
+              <div class="ui-block-b">Hành động, Phiêu lưu</div>
+              <div class="ui-block-a"><span> * </span>Quốc gia:</div>
+              <div class="ui-block-b">Âu-Mỹ</div>
+            </div>
+            <div></div>
+            <div>
+              <div>
+                <h2>Avengers: Age of Ultron</h2>
+              </div>
+              <div itemprop="description">
+                <div id="mCSB_1">
+                  <div>Mệt mỏi vì công việc của một nhà sáng chế, doanh nhân và cả trách nhiệm   của một siêu anh hùng, Tony đã quyết định tạo ra Ultron để thay mình bảo   vệ thế giới. Nhưng ý tưởng đã thất bại, Ultron trở nên mất kiểm soát và   biến thành một cỗ máy sát nhân máu lạnh. Khi hòa bình lại bị đe dọa, đó   cũng là lúc biệt đội Avengers phải trở lại và ra tay</div>
+                </div>
+              </div>
+            </div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+   
+   <div id="pagep4" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>
+            <iframe class="youtube-player" type="text/html" width="100%" height="auto" src=http://www.youtube.com/embed/RFinNxS5KN4?rel=0 frameborder="0" allowfullscreen></iframe></h1>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><span> * </span>Tên phim:</div>
+              <div class="ui-block-b">Jurassic World </div>
+               <div class="ui-block-a"><span> * </span>Năm phát hành:</div>
+              <div class="ui-block-b">2015</div>
+               <div class="ui-block-a"><span> * </span>Đánh giá phim:</div>
+              <div class="ui-block-b">Chưa có đánh giá</div>
+               <div class="ui-block-a"><span> * </span>Diễn viên:</div>
+              <div class="ui-block-b">Chris Pratt, Bryce Dallas Howard, Jake Johnson</div>
+              <div class="ui-block-a"><span> * </span>Thể loại:</div>
+              <div class="ui-block-b">Hành động, Phiêu lưu, Khoa học viễn tưởng</div>
+              <div class="ui-block-a"><span> * </span>Quốc gia:</div>
+              <div class="ui-block-b">Âu-Mỹ</div>
+            </div>
+            <div></div>
+            <div>
+              <div>
+                <h2>Jurassic World </h2>
+              </div>
+              <div itemprop="description">
+                <div id="mCSB_1">
+                  <div>Phim sẽ xảy ra 22 năm sau các sự kiện của phần “Jurassic Park” và giải thích thêm rằng kịch bản sẽ hướng vào chuyện cố gắng kết hợp giữa hai chủ đề lớn: tham vọng làm giàu và mối quan hệ của con người với công nghệ hiện đại. Trevorrow cũng đính chính lại những tin đồn lan truyền trên internet rằng sẽ có những con khủng long đóng vai chính diện trong phim.</div>
+                </div>
+              </div>
+            </div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+        
+        
+        <div id="pagep5" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"></a>
+				<img src="img/logo.png" >
+			</div>
+			<div class="content" data-role="content">
+            <div class="noidung">
+            <h1>
+            <iframe class="youtube-player" type="text/html" width="100%" height="auto" src=http://www.youtube.com/embed/xPLdMoElKQ0?rel=0 frameborder="0" allowfullscreen></iframe></h1>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><span> * </span>Tên phim:</div>
+              <div class="ui-block-b">The Hunger Games: Catching Fire</div>
+               <div class="ui-block-a"><span> * </span>Năm phát hành:</div>
+              <div class="ui-block-b">2013</div>
+               <div class="ui-block-a"><span> * </span>Đánh giá phim:</div>
+              <div class="ui-block-b"> 9.21 (628 lượt)</div>
+               <div class="ui-block-a"><span> * </span>Diễn viên:</div>
+              <div class="ui-block-b">Jennifer Lawrence , Josh Hutcherson , Liam Hemsworth , Woody Harrelson, Elizabeth Banks , Julianne Moore</div>
+              <div class="ui-block-a"><span> * </span>Thể loại:</div>
+              <div class="ui-block-b">Khoa học viễn tưởng, Phiêu lưu</div>
+              <div class="ui-block-a"><span> * </span>Quốc gia:</div>
+              <div class="ui-block-b">Âu-Mỹ</div>
+            </div>
+            <div></div>
+            <div>
+              <div>
+                <h2>The Hunger Games: Catching Fire</h2>
+              </div>
+              <div itemprop="description">
+                <div id="mCSB_1">
+                  <div>The Hunger Games bắt đầu khi Katniss Everdeen an toàn trở về nhà sau chiến thắng tại cuộc đấu Trò chơi sinh tử lần thứ 74 được tổ chức thường niên cùng Peeta Mellark. Chiến thắng này đồng nghĩa với việc họ phải bỏ lại gia đình và bạn bè phía sau để lên đường tham gia "Chuyến đi của những người chiến thắng" cùng các quận khác. Trong quá trình đó, Katniss cảm nhận thấy một cuộc nổi loạn sắp diễn ra, nhưng Capitol vẫn nắm quyền quyển soát khi Tổng thống Snow chuẩn bị cho Trò chơi sinh tử lần thứ 75 (The Quarter Quell) - cuộc đấu sẽ thay đổi Panem mãi mãi. </div>
+                </div>
+              </div>
+            </div>
+            </div>
+                        			<div class="footer">
+            <table class="cs" border="0" align="center">
+            <tr>
+            <td><a href="index.html#page3"><div class="thongtin"></div></a></td>
+            <td><a href="index.html"><div class="home"></div></a></td>
+            <td><a href="index.html#page5"><div class="lienhef"></div></a></td></tr></table>
+           </div>
+	  </div>
+		</div>
+
+
+
+
+	<nav id="menu">
+
+			<ul>
+            
+    <div id="box">
+        <form action="#">
+            <input type="submit" value="" />
+            <input type="search" placeholder="Search..." />
+        </form>
+    </div>
+				<li class="Selected"><a href="index.html"><div class="tc"></div>Trang chủ</a></li>
+				<li><a href="index.html#page2"><div class="p"></div> Phim</a></li>
+                <li><a href="index.html#page3"><div class="tt"></div>Tin tức</a></li>
+                <li><a href="index.html#page4"><div class="gt"></div>Giới thiệu</a></li>
+                <li><a href="index.html#page5"><div class="lh"></div>Liên hệ</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

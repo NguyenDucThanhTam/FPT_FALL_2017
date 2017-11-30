@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AlertDialog_PS05854</string>
+    <string name="buttonExit">Exit</string>
+    <string name="click_over_button_to_exit"></string>
+</resources>

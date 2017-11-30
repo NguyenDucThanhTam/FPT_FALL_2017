@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Tính trung bình cộng 2 số"
+        android:padding="10sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="10sp"
+            android:text="Số thứ 1: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edtLab5_Lesson2_Num1"
+            android:inputType="text"
+            android:layout_width="300sp"
+            android:ems="10"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="10sp"
+            android:text="Số thứ 2: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edtLab5_Lesson2_Num2"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button android:id="@+id/btnLab5_Lesson2_Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tính Tổng"
+        android:layout_gravity="center">
+
+    </Button>
+</LinearLayout>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<!--Css new-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.js"></script>
+<link href="css/themes/default/jquery.mobile.icons-1.4.	5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css">
+
+<!--JS new-->
+<!--SildeSHow JS-->
+<link href="css/themes/default/silde.css" rel="stylesheet" type="text/css">
+<script src="js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
+<script src="js/better-simple-slideshow.min.js"></script>
+<script>
+$(function() {
+    $('.neoslideshow img:gt(0)').hide();
+    setInterval(function(){
+      $('.neoslideshow :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.neoslideshow');}, 
+      4000);
+})
+</script>
+<!--End JS-->
+</head>
+<style>
+.neoslideshow {position:relative; width:500px; height:260px;}
+.neoslideshow img {position:absolute;left:0; top:0;}
+	/*End sildeshow*/
+</style>
+<body>
+<div data-role="page" id="page">
+  <div data-role="header" style="width: 100%;">
+  	<div >
+  		<a href="#menu" style="width: 10%;">
+  			<img src="imgs/bullets-black.png">
+  		</a>
+  	</div>
+   	<div class="logoI">
+   		<img src="imgs/10905723-0-logoDantricomvn.png" width="205">
+   	</div>
+    <div class="viewW">
+    	<a href="http://dantri.com.vn/">
+    		Xem giao diện web
+    	</a>
+    </div>
+  </div>
+  <div data-role="content">
+    <div class="ui-grid-a" style="width: 100%">
+      <div class="ui-block-a" style="width: 100%; border-bottom:1px solid #9B1012; ">
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+          	<a href="">
+          		<div class="neoslideshow" style="width: 100%;">
+  <img src="imgs/20623275-910821629065893-110135541-o-1501752440690.jpg" width="100%"/>
+  <img src="imgs/20630264-10207569509555483-1932516804-o-1501760431567.jpg" width="100%"/>
+  <img src="imgs/dt23.11batycho2-98ac1.JPG" width="100%"/>
+  <img src="imgs/image015.png" width="100%"/>
+  <img src="imgs/nghe-loi-khai-lanh-gay-cua-sat-thu-nguyen-hai-duong-1.jpg" width="100%"/>
+</div>
+          	</a>
+          </div>
+          <div class="ui-block-b" style="padding-left: 3%;">
+          	<a href="https://www.google.com/url?q=http://dantri.com.vn/chinh-tri/bo-ngoai-giao-noi-gi-ve-thong-tin-trinh-xuan-thanh-bi-bat-coc-tai-duc-201708031549251.htm&sa=U&ved=0ahUKEwjBqNS6ubvVAhUDEbwKHReyCUkQFggFMAA&client=internal-uds-cse&usg=AFQjCNE1-1B8MY6pODK0CqgUbIFr-lDQKA" style="font-size: 90%;">
+          		Bộ Ngoại giao nói gì về thông tin Trịnh Xuân Thanh bị “bắt cóc” tại Đức?
+          	</a>
+          </div>
+          
+        </div>
+        <ul>
+        	<li>
+        		<a href="http://dantri.com.vn/chinh-tri/bo-ngoai-giao-len-tieng-ve-thong-tin-trung-quoc-de-doa-viet-nam-o-bien-dong-2017080318040426.htm">
+          	Bộ Ngoại giao lên tiếng về thông tin Trung Quốc đe dọa Việt Nam ở Biển Đông
+        </a>
+        	</li>
+        	<li>
+        		<a href="http://dantri.com.vn/su-kien/vu-tau-vo-thep-hu-hong-ngu-dan-het-kien-nhan-cho-doi-20170803194902769.htm">
+          	Vụ tàu vỏ thép hư hỏng: Ngư dân hết kiên nhẫn chờ đợi
+        </a>
+        	</li>
+        	<li>
+        		<a href="http://dantri.com.vn/su-kien/cuoc-doi-day-thang-tram-bien-co-cua-dan-dien-vien-van-bai-lat-ngua-20170803130705346.htm">
+          	Cuộc đời đầy thăng trầm biến cố của dàn diễn viên “Ván bài lật ngửa”
+        </a>
+        	</li>
+        </ul>
+      </div>
+      
+       <!--sự kiện-->
+      <div class="ui-block-a" style="width: 100%; border-bottom: 1px solid #9B1012;">
+      	<label style="font-size: 100%;color: #760507;font-weight: 600;">
+      		Sự kiện
+      	</label>
+      	<div class="ui-grid-a">
+      	  <div class="ui-block-a">
+      	  	<a href="#menu">
+      	  		Hồ sơ việc bổ nhiệm Trịnh Xuân Thanh làm Phó Chủ tịch Hậu Giang bị thất lạc
+      	  	</a>
+      	  	<ul>
+      	  		<li>
+      	  			<a href="http://dantri.com.vn/the-gioi/ong-trump-noi-quan-he-nga-my-o-muc-thap-nhat-moi-thoi-dai-20170803211552691.htm">
+      	  				Ông Trump nói quan hệ Nga - Mỹ ở mức thấp nhất mọi thời đại
+      	  			</a>
+      	  		</li>
+      	  		<li>
+      	  			<a href="http://dantri.com.vn/giao-duc-khuyen-hoc/truong-dai-hoc-su-pham-tphcm-nhan-loi-viec-cong-bo-diem-chuan-gay-hieu-nham-20170803160222859.htm">
+      	  				Trường Đại học Sư phạm TPHCM nhận lỗi việc công bố điểm chuẩn gây hiểu nhầm
+      	  			</a>
+      	  		</li>
+      	  	</ul>
+      	  </div>
+      	  <div class="ui-block-b">
+      	  	<img src="imgs/20630264-10207569509555483-1932516804-o-1501760431567.jpg" width="100%">
+      	  </div>
+   	    </div>
+      	
+      </div>
+      
+      
+      
+      <!--Thông tin-->
+      <div class="ui-block-a" style="width: 100%">
+      	<label style="font-size: 100%;color: #760507;font-weight: 600;">
+      		Thông tin
+      	</label>
+      	<div class="ui-grid-a">
+      	  <div class="ui-block-a">
+      	  	<a href="">
+      	  		Hồ sơ việc bổ nhiệm Trịnh Xuân Thanh làm Phó Chủ tịch Hậu Giang bị thất lạc
+      	  	</a>
+      	  	<ul>
+      	  		<li>
+      	  			<a href="http://dantri.com.vn/the-gioi/ong-trump-noi-quan-he-nga-my-o-muc-thap-nhat-moi-thoi-dai-20170803211552691.htm">
+      	  				Ông Trump nói quan hệ Nga - Mỹ ở mức thấp nhất mọi thời đại
+      	  			</a>
+      	  		</li>
+      	  		<li>
+      	  			<a href="http://dantri.com.vn/giao-duc-khuyen-hoc/truong-dai-hoc-su-pham-tphcm-nhan-loi-viec-cong-bo-diem-chuan-gay-hieu-nham-20170803160222859.htm">
+      	  				Trường Đại học Sư phạm TPHCM nhận lỗi việc công bố điểm chuẩn gây hiểu nhầm
+      	  			</a>
+      	  		</li>
+      	  	</ul>
+      	  </div>
+      	  <div class="ui-block-b">
+      	  	<img src="imgs/20630264-10207569509555483-1932516804-o-1501760431567.jpg" width="100%">
+      	  </div>
+   	    </div>
+      	
+      </div>
+    </div>
+  	
+    
+  <div data-role="footer">
+    <h4>U5L1PS05854</h4>
+  </div>
+  
+</div>
+<div data-role="panel" id="menu" data-position="left" data-display="reveal" >
+    	<a href="#page" data-role="button" data-icon="home" data-iconpos="left"  data-rel="close">Trang chủ</a>
+    	<a href="#page2" data-role="button" data-icon="info" data-rel="close">Liên hệ</a>
+    	
+    </div>
+    
+  </div>
+  
+  <div data-role="page" id="page2">
+      <div data-role="header" style="width: 100%;">
+  	<div >
+  		<a href="index.html#menu2" style="width: 10%;">
+  			<img src="imgs/bullets-black.png">
+  		</a>
+  	</div>
+   	<div class="logoI">
+   		<img src="imgs/10905723-0-logoDantricomvn.png" width="205">
+   	</div>
+    <div class="viewW">
+    	<a href="http://dantri.com.vn/">
+    		Xem giao diện web
+    	</a>
+    </div>
+  </div>
+      <div data-role="content">
+        <div data-role="fieldcontain" style="text-align: center">
+        <!--SildeShow-->
+      <div id="row1">
+                <div id="silde_col1">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="container">
+                            <div id="slides">
+                                <img src="imgs/banner1.jpg" alt="Banner 1" height="300" width="1040">
+                                <img src="imgs/banner2.jpg" alt="Banner 2" height="300" width="1040">
+                                <img src="imgs/banner3.jpg" alt="Banner 3" height="300" width="1040">
+                                <img src="imgs/banner4.jpg" alt="Banner 4" height="300" width="1040">
+                            </div>
+                            <!--Jquery-->
+                            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+                            <!--sildeJS-->
+                            <script src="js/jquery.slides.min.js"></script>
+                            <!--JS điều khiển-->
+                            <script>
+                                $(function() {
+                               		 $('#slides').slidesjs({
+                                		width: 940,
+                                		height: 528,
+                                		play: {
+                                		active: true,
+                                		auto: true,
+                                		interval: 4000,
+                                		swap: true
+                               			}
+                                	});
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div id="sp_col2">
+
+                </div>
+            </div>
+        <!--End Silde-->
+         
+          <label for="textinput">Cơ quan của TW Hội Khuyến học Việt Nam
+Giấy phép hoạt động báo điện tử Dân trí trên Internet số 378/GP - BTTTT Hà Nội, ngày 16-09-2013.
+Tòa soạn: Số 2 (nhà 48) Giảng Võ, Quận Đống Đa, Hà Nội
+Điện thoại: 024-3736-6491. Fax: 024-3736-6490
+Email: info@dantri.com.vn. Website: http://www.dantri.com.vn 
+Mọi hành động sử dụng nội dung đăng tải trên Báo điện tử Dân trí tại địa chỉ www.dantri.com.vn phải
+có sự đồng ý bằng văn bản của Báo điện tử Dân trí.</label>
+          
+        </div>
+      	
+      </div>
+      <div data-role="footer">
+        <h4>U5L1PS05854</h4>
+      </div>
+      <div data-role="panel" id="menu2" data-position="left" data-display="reveal" >
+    	<a href="#page" data-role="button" data-icon="home" data-iconpos="left"  data-rel="close">Trang chủ</a>
+    	<a href="#page2" data-role="button" data-icon="info" data-rel="close">Liên hệ</a>
+    	
+    </div>
+    </div>
+    
+</body>
+</html>

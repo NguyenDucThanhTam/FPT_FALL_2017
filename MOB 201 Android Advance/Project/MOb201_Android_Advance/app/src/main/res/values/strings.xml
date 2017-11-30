@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MOb201_Android_Advance</string>
+
+    <!--Activity-->
+    <!--Button-->
+    <string name="Button_Lab1">Lab1</string>
+    <string name="Button_Lab2">Lab2</string>
+    <string name="Button_Lab3">Lab3</string>
+    <string name="Button_Lab4">Lab4</string>
+    <string name="Button_Lab5">Lab5</string>
+    <string name="Button_Lab6">Lab6</string>
+    <string name="Button_Lab7">Lab7</string>
+    <string name="Button_Lab8">Lab8</string>
+
+    <string name="openExercise1">Exercise 1</string>
+    <string name="openExercise2">Exercise 2</string>
+    <string name="openExercise3">Exercise 3</string>
+    <string name="openExercise4">Exercise 4</string>
+
+    <string name="btn_createService_Lab1_Main">Create Service</string>
+    <string name="btn_stopService_Lab1_Main">Stop Service</string>
+    <string name="channel_name">Create Notification</string>
+    <string name="channel_description">Description</string>
+
+</resources>

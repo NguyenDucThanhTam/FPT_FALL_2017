@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://saulmm.github.io/mastering-coordinator -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Mastering the Coordinator Layout · Saúl Molinero
+    
+  </title>
+
+  <link rel="stylesheet" href="./Mastering the Coordinator Layout · Saúl Molinero_files/poole.css">
+  <link rel="stylesheet" href="./Mastering the Coordinator Layout · Saúl Molinero_files/syntax.css">
+  <link rel="stylesheet" href="./Mastering the Coordinator Layout · Saúl Molinero_files/hyde.css">
+  <link rel="stylesheet" href="./Mastering the Coordinator Layout · Saúl Molinero_files/css">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://saulmm.github.io/public/apple-touch-icon-144-precomposed.png">
+  <link rel="icon" href="http://saulmm.github.io/public/favicon.ico" type="image/x-icon">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://saulmm.github.io/atom.xml">
+<script async="" src="./Mastering the Coordinator Layout · Saúl Molinero_files/analytics.js.tải xuống"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59325020-1', 'auto');
+  ga('send', 'pageview');
+
+</script></head>
+
+  
+
+  <body class="theme-base-0f" cz-shortcut-listen="true">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="http://saulmm.github.io/">
+          Saúl Molinero
+        </a>
+      </h1>
+      <p class="lead">I usually talk about android development</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="sidebar-nav-item"></span>
+    </nav>
+
+    <a href="https://plus.google.com/+SaulMolineroMalvido/posts">Plus</a> -
+    <a href="https://twitter.com/_saulmm">Twitter</a> -
+    <a href="https://github.com/saulmm">Github</a>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Mastering the Coordinator Layout</h1>
+  <span class="post-date">27 Oct 2015</span>
+  
+
+  <p>In the <a href="https://www.youtube.com/watch?v=7V-fIGMDsmE">Google I/O 15</a>, Google released a <a href="http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html">new support library</a> which implements several components closely related with the <a href="https://www.google.com/design/spec/material-design/introduction.html">Material Design's spec</a>, among these components you can find new <em>ViewGroups</em> like the <code>AppbarLayout</code>, <code>CollapsingToolbarLayout</code> and <code>CoordinatorLayout</code>.</p>
+
+<p>Well combined and configured these <em>Viewgroups</em> can be very powerful, therefore I have decided to write a post with some configurations and tips. </p>
+
+<p><br></p>
+
+<h2>CoordinatorLayout</h2>
+
+<p>As its name suggests, the goal and philosophy of this <em>ViewGroup</em> is to <strong>coordinate</strong> the views that are inside it.</p>
+
+<p>Consider the following picture:</p>
+
+<p><br>
+<img src="./Mastering the Coordinator Layout · Saúl Molinero_files/simple_coordinator.gif" alt=""></p>
+
+<p><br>
+In this example you can see how the views are coordinated with each other, with a glance, we can see how some <em>Views</em> <strong>depend</strong> on other. (we'll talk about this later).</p>
+
+<p>This would be one of the simplest structures using the <code>CoordinatorLayout</code>:
+<br></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+
+<span class="nt">&lt;android.support.design.widget.CoordinatorLayout</span>
+    <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+    <span class="na">android:background=</span><span class="s">"@android:color/background_light"</span>
+    <span class="na">android:fitsSystemWindows=</span><span class="s">"true"</span>
+    <span class="nt">&gt;</span>
+
+    <span class="nt">&lt;android.support.design.widget.AppBarLayout</span>
+        <span class="na">android:id=</span><span class="s">"@+id/main.appbar"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"300dp"</span>
+        <span class="na">android:theme=</span><span class="s">"@style/ThemeOverlay.AppCompat.Dark.ActionBar"</span>
+        <span class="na">android:fitsSystemWindows=</span><span class="s">"true"</span>
+        <span class="nt">&gt;</span>
+
+        <span class="nt">&lt;android.support.design.widget.CollapsingToolbarLayout</span>
+            <span class="na">android:id=</span><span class="s">"@+id/main.collapsing"</span>
+            <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+            <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+            <span class="na">app:layout_scrollFlags=</span><span class="s">"scroll|exitUntilCollapsed"</span>
+            <span class="na">android:fitsSystemWindows=</span><span class="s">"true"</span>
+            <span class="na">app:contentScrim=</span><span class="s">"?attr/colorPrimary"</span>
+            <span class="na">app:expandedTitleMarginStart=</span><span class="s">"48dp"</span>
+            <span class="na">app:expandedTitleMarginEnd=</span><span class="s">"64dp"</span>
+            <span class="nt">&gt;</span>
+
+            <span class="nt">&lt;ImageView</span>
+                <span class="na">android:id=</span><span class="s">"@+id/main.backdrop"</span>
+                <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+                <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+                <span class="na">android:scaleType=</span><span class="s">"centerCrop"</span>
+                <span class="na">android:fitsSystemWindows=</span><span class="s">"true"</span>
+                <span class="na">android:src=</span><span class="s">"@drawable/material_flat"</span>
+                <span class="na">app:layout_collapseMode=</span><span class="s">"parallax"</span>
+                <span class="nt">/&gt;</span>
+
+            <span class="nt">&lt;android.support.v7.widget.Toolbar</span>
+                <span class="na">android:id=</span><span class="s">"@+id/main.toolbar"</span>
+                <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+                <span class="na">android:layout_height=</span><span class="s">"?attr/actionBarSize"</span>
+                <span class="na">app:popupTheme=</span><span class="s">"@style/ThemeOverlay.AppCompat.Light"</span>
+                <span class="na">app:layout_collapseMode=</span><span class="s">"pin"</span>
+                <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/android.support.design.widget.CollapsingToolbarLayout&gt;</span>
+    <span class="nt">&lt;/android.support.design.widget.AppBarLayout&gt;</span>
+
+    <span class="nt">&lt;android.support.v4.widget.NestedScrollView</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+        <span class="na">app:layout_behavior=</span><span class="s">"@string/appbar_scrolling_view_behavior"</span>
+        <span class="nt">&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:textSize=</span><span class="s">"20sp"</span>
+            <span class="na">android:lineSpacingExtra=</span><span class="s">"8dp"</span>
+            <span class="na">android:text=</span><span class="s">"@string/lorem"</span>
+            <span class="na">android:padding=</span><span class="s">"@dimen/activity_horizontal_margin"</span>
+            <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/android.support.v4.widget.NestedScrollView&gt;</span>
+
+    <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:layout_margin=</span><span class="s">"@dimen/activity_horizontal_margin"</span>
+        <span class="na">android:src=</span><span class="s">"@drawable/ic_comment_24dp"</span>
+        <span class="na">app:layout_anchor=</span><span class="s">"@id/main.appbar"</span>
+        <span class="na">app:layout_anchorGravity=</span><span class="s">"bottom|right|end"</span>
+        <span class="nt">/&gt;</span>
+<span class="nt">&lt;/android.support.design.widget.CoordinatorLayout&gt;</span>
+</code></pre></div>
+<p>Consider the skeleton of that layout. The <code>CoordinatorLayout</code> has only three childs: an <code>AppbarLayout</code>,  an <em>scrolleable</em> view and an anchored <code>FloatingActionButton</code>.</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;CoordinatorLayout&gt;</span>
+    <span class="nt">&lt;AppbarLayout/&gt;</span>
+    <span class="nt">&lt;scrollableView/&gt;</span>
+    <span class="nt">&lt;FloatingActionButton/&gt;</span>
+<span class="nt">&lt;/CoordinatorLayout&gt;</span>
+</code></pre></div>
+<p><br></p>
+
+<h2>AppBarLayout</h2>
+
+<p>Basically, an <code>AppBarLayout</code> is a <code>LinearLayout</code> with steroids, their children are placed vertically, with certain parameters the children can manage their behavior when the content is scrolled.</p>
+
+<p>It may sound confusing at first, so if I think a picture is worth a thousand words, a .gif, is even better:</p>
+
+<p><br>
+<img src="./Mastering the Coordinator Layout · Saúl Molinero_files/2015-10-27-03_51_37.gif" alt="">
+<br>
+The <code>AppBarLayout</code> in this case is the blue view, placed under the collapsing image, it contains a <code>Toolbar</code>, a <code>LinearLayout</code> with title and subtitle and a <code>TabLayout</code> with some tabs.</p>
+
+<p>We can manage the behavior of  direct childs in an <code>AppbarLayout</code> with the parameter: <code>layout_scrollFlags</code>. The value: <code>scroll</code> in this case it's present in almost all views, if it wasn't specified in any child then the childs of the <code>AppbarLayout</code> will remain static allowing the <em>scrollable</em> content slide behind it.</p>
+
+<p>With the value: <code>snap</code>, we avoid fall into <em>mid-animation-states</em>, this means that the animations will always hide or expand all the height of its view.</p>
+
+<p>The <code>LinearLayout</code> which contains the title and subtitle will be shown always that the user scrolls up, (<code>enterAlways</code> value), and the <code>TabLayout</code> will be always visible because we don't have any flag on it.</p>
+
+<p>As you can see the real power of an <code>AppbarLayout</code> is caused by the proper management of the different scroll flags in their views.</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;AppBarLayout&gt;</span>
+    <span class="nt">&lt;CollapsingToolbarLayout</span>
+        <span class="na">app:layout_scrollFlags=</span><span class="s">"scroll|snap"</span>
+        <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;Toolbar</span>
+        <span class="na">app:layout_scrollFlags=</span><span class="s">"scroll|snap"</span>
+        <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;LinearLayout</span>
+        <span class="na">android:id=</span><span class="s">"+id/title_container"</span>
+        <span class="na">app:layout_scrollFlags=</span><span class="s">"scroll|enterAlways"</span>
+        <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;TabLayout</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- no flags --&gt;</span>
+<span class="nt">&lt;/AppBarLayout&gt;</span>
+</code></pre></div>
+<p>These are all available parameters acording <a href="https://developer.android.com/intl/es/reference/android/support/design/widget/AppBarLayout.LayoutParams.html#CONSTANTS">Google Developers docs</a>. Anyway, my recommendation is to always play by example. There are some Github repositories with these implementations at the end of this article.</p>
+
+<h3>AppbarLayout flags</h3>
+
+<p><code>SCROLL_FLAG_ENTER_ALWAYS</code>: When entering (scrolling on screen) the view will scroll on any downwards scroll event, regardless of whether the scrolling view is also scrolling. </p>
+
+<p><code>SCROLL_FLAG_ENTER_ALWAYS_COLLAPSED</code>: An additional flag for 'enterAlways' which modifies the returning view to only initially scroll back to it's collapsed height.                      </p>
+
+<p><code>SCROLL_FLAG_EXIT_UNTIL_COLLAPSED</code>: When exiting (scrolling off screen) the view will be scrolled until it is 'collapsed'.                              </p>
+
+<p><code>SCROLL_FLAG_SCROLL</code>: The view will be scroll in direct relation to scroll events.<br>
+<code>SCROLL_FLAG_SNAP</code>: Upon a scroll ending, if the view is only partially visible then it will be snapped and scrolled to it's closest edge.<br>
+<br></p>
+
+<h2>CoordinatorLayout Behaviors</h2>
+
+<p>Let's do a little test, go to Android Studio (&gt;= 1.4) and create a project with the template: <em>Scrolling Activity</em>, without touching anything, we compile it and this is what we find:</p>
+
+<p><img src="./Mastering the Coordinator Layout · Saúl Molinero_files/2015-10-27-03_59_27.gif" alt=""></p>
+
+<p><br>
+If we review the generated code, neither layouts nor java classes won't have anything related with the Fab's <em>scale</em> animation on scroll. Why?</p>
+
+<p>The answer lies in the <code>FloatingActionButton</code> source code, since Android Studio v1.2 includes a java decompiler inside it, with <code>ctrl/cmd + click</code> we are able to check the source and see what happens:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*
+ * Copyright (C) 2015 The Android Open Source Project
+ *
+ *  Floating action buttons are used for a
+ *  special type of promoted action. 
+ *  They are distinguished by a circled icon 
+ *  floating above the UI and have special motion behaviors 
+ *  related to morphing, launching, and the transferring anchor point.
+ * 
+ *  blah.. blah.. 
+ */</span>
+<span class="nd">@CoordinatorLayout</span><span class="o">.</span><span class="na">DefaultBehavior</span><span class="o">(</span>
+    <span class="n">FloatingActionButton</span><span class="o">.</span><span class="na">Behavior</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FloatingActionButton</span> <span class="kd">extends</span> <span class="n">ImageButton</span> <span class="o">{</span>
+    <span class="o">...</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Behavior</span> 
+        <span class="kd">extends</span> <span class="n">CoordinatorLayout</span><span class="o">.</span><span class="na">Behavior</span><span class="o">&lt;</span><span class="n">FloatingActionButton</span><span class="o">&gt;</span> <span class="o">{</span>
+
+        <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">updateFabVisibility</span><span class="o">(</span>
+           <span class="n">CoordinatorLayout</span> <span class="n">parent</span><span class="o">,</span> <span class="n">AppBarLayout</span> <span class="n">appBarLayout</span><span class="o">,</span> 
+           <span class="n">FloatingActionButton</span> <span class="n">child</span> <span class="o">{</span>
+
+           <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="kt">long</span> <span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// If the anchor's bottom is below the seam, </span>
+                <span class="c1">// we'll animate our FAB out</span>
+                <span class="n">child</span><span class="o">.</span><span class="na">hide</span><span class="o">();</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="c1">// Else, we'll animate our FAB back in</span>
+                <span class="n">child</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Who is in charge of that scale animation is a new element introduced with the design library called <code>Behavior</code>. In this case a <code>CoordinatorLayout.Behavior&lt;FloatingAcctionButton&gt;</code>, which depending on some factors including the scroll, shows the FAB or not, interesting, right?.</p>
+
+<h3>SwipeDismissBehavior</h3>
+
+<p>Keep diving into the code, if you look inside the <em>widget</em> package of the <strong>design support library</strong>, we'll find a public class called: <code>SwipeDismissBehavior</code>. With this new <code>Behavior</code> we can very easily implement the functionality of <em>swipe to dismiss</em> in our layouts with a <code>CoordinatorLayout</code>:</p>
+
+<p><img src="./Mastering the Coordinator Layout · Saúl Molinero_files/hammerheadLMY48Msaulmm10242015161844.gif" alt=""></p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_swipe_behavior</span><span class="o">);</span>
+    <span class="n">mCardView</span> <span class="o">=</span> <span class="o">(</span><span class="n">CardView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">swype_card</span><span class="o">);</span>
+
+    <span class="kd">final</span> <span class="n">SwipeDismissBehavior</span><span class="o">&lt;</span><span class="n">CardView</span><span class="o">&gt;</span> <span class="n">swipe</span> 
+        <span class="o">=</span> <span class="k">new</span> <span class="n">SwipeDismissBehavior</span><span class="o">();</span>
+
+        <span class="n">swipe</span><span class="o">.</span><span class="na">setSwipeDirection</span><span class="o">(</span>
+            <span class="n">SwipeDismissBehavior</span><span class="o">.</span><span class="na">SWIPE_DIRECTION_ANY</span><span class="o">);</span>
+
+        <span class="n">swipe</span><span class="o">.</span><span class="na">setListener</span><span class="o">(</span>
+            <span class="k">new</span> <span class="n">SwipeDismissBehavior</span><span class="o">.</span><span class="na">OnDismissListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDismiss</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">SwipeBehaviorExampleActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span>
+                    <span class="s">"Card swiped !!"</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span> 
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDragStateChanged</span><span class="o">(</span><span class="kt">int</span> <span class="n">state</span><span class="o">)</span> <span class="o">{}</span>
+        <span class="o">});</span>
+
+        <span class="n">LayoutParams</span> <span class="n">coordinatorParams</span> <span class="o">=</span> 
+            <span class="o">(</span><span class="n">LayoutParams</span><span class="o">)</span> <span class="n">mCardView</span><span class="o">.</span><span class="na">getLayoutParams</span><span class="o">();</span>
+
+        <span class="n">coordinatorParams</span><span class="o">.</span><span class="na">setBehavior</span><span class="o">(</span><span class="n">swipe</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div>
+<p><br></p>
+
+<h2>Custom Behaviors</h2>
+
+<p>To create a custom <code>Behavior</code> It isn't as difficult as it may seem, to begin we must take into account two core elements: <strong>child</strong> and <strong>dependency</strong>.</p>
+
+<p><br>
+<img src="./Mastering the Coordinator Layout · Saúl Molinero_files/Screen-Shot-2015-10-27-at-04.42.37-e1445917457348.png" alt="">
+<br></p>
+
+<h3>Childs and dependencies</h3>
+
+<p>The <strong>child</strong> is the view that enhances behavior, <strong>dependency</strong> who will serve as a trigger to interact with the <em>child</em> element. See this example, the <strong>child</strong> would be the <code>ImageView</code> and the <strong>dependency</strong> would be the <code>Toolbar</code>, in that way, if the <code>Toolbar</code> moves, the <code>ImageView</code> will move too.</p>
+
+<p><br></p>
+
+<p><img src="./Mastering the Coordinator Layout · Saúl Molinero_files/2015-10-27-04_30_50.gif" alt=""></p>
+
+<p><br></p>
+
+<p>Now that we have defined the concepts we can speak of implementation, the first step is to extend of: <code>CoordinatorLayout.Behavior&lt;T&gt;</code>, been <code>T</code> the class that belongs the view that interests us coordinate, in this case an <em>ImageView</em>, after that we must override these methods:</p>
+
+<ul>
+<li>layoutDependsOn</li>
+<li>onDependentViewChanged</li>
+</ul>
+
+<p>The method: <code>layoutDependsOn</code> will be called every time that something happens in the layout, what we must do to return <code>true</code> once we identify the dependency, in the example, this method is automatically fired when the user scrolls (because the <code>Toolbar</code> will move), in that way we can make our child sight react accordingly.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">layoutDependsOn</span><span class="o">(</span><span class="err"> </span>      
+      <span class="n">CoordinatorLayout</span> <span class="n">parent</span><span class="o">,</span> 
+      <span class="n">CircleImageView</span><span class="o">,</span> <span class="n">child</span><span class="o">,</span> 
+      <span class="n">View</span> <span class="n">dependency</span><span class="o">)</span> <span class="o">{</span>
+
+      <span class="k">return</span> <span class="n">dependency</span> <span class="k">instanceof</span> <span class="n">Toolbar</span><span class="o">;</span> 
+  <span class="o">}</span> 
+</code></pre></div>
+<p>Whenever <code>layoutDependsOn</code> returns <code>true</code> the second <code>onDependentViewChanged</code> will be called. Here is where we must to implement our animations, translations or movements always related with the provided dependency.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">   <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onDependentViewChanged</span><span class="o">(</span><span class="err"> </span>
+      <span class="n">CoordinatorLayout</span> <span class="n">parent</span><span class="o">,</span> 
+      <span class="n">CircleImageView</span> <span class="n">avatar</span><span class="o">,</span> 
+      <span class="n">View</span> <span class="n">dependency</span><span class="o">)</span> <span class="o">{</span><span class="err"> </span>
+
+      <span class="n">modifyAvatarDependingDependencyState</span><span class="o">(</span><span class="n">avatar</span><span class="o">,</span> <span class="n">dependency</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">modifyAvatarDependingDependencyState</span><span class="o">(</span>
+    <span class="n">CircleImageView</span> <span class="n">avatar</span><span class="o">,</span> <span class="n">View</span> <span class="n">dependency</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//  avatar.setY(dependency.getY());</span>
+        <span class="c1">//  avatar.setBlahBlat(dependency.blah / blah);</span>
+    <span class="o">}</span> 
+</code></pre></div>
+<p>All together:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="err"> </span><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">AvatarImageBehavior</span> 
+   <span class="kd">extends</span> <span class="err"> </span><span class="n">CoordinatorLayout</span><span class="o">.</span><span class="na">Behavior</span><span class="o">&lt;</span><span class="n">CircleImageView</span><span class="o">&gt;</span> <span class="o">{</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">layoutDependsOn</span><span class="o">(</span><span class="err"> </span>
+    <span class="n">CoordinatorLayout</span> <span class="n">parent</span><span class="o">,</span> 
+    <span class="n">CircleImageView</span><span class="o">,</span> <span class="n">child</span><span class="o">,</span> 
+    <span class="n">View</span> <span class="n">dependency</span><span class="o">)</span> <span class="o">{</span>
+
+       <span class="k">return</span> <span class="n">dependency</span> <span class="k">instanceof</span> <span class="n">Toolbar</span><span class="o">;</span> 
+  <span class="o">}</span> <span class="err">  </span>   
+
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onDependentViewChanged</span><span class="o">(</span><span class="err"> </span>      
+    <span class="n">CoordinatorLayout</span> <span class="n">parent</span><span class="o">,</span> 
+    <span class="n">CircleImageView</span> <span class="n">avatar</span><span class="o">,</span> 
+    <span class="n">View</span> <span class="n">dependency</span><span class="o">)</span> <span class="o">{</span><span class="err"> </span>
+      <span class="n">modifyAvatarDependingDependencyState</span><span class="o">(</span><span class="n">avatar</span><span class="o">,</span> <span class="n">dependency</span><span class="o">);</span>
+   <span class="o">}</span>
+
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">modifyAvatarDependingDependencyState</span><span class="o">(</span>
+    <span class="n">CircleImageView</span> <span class="n">avatar</span><span class="o">,</span> <span class="n">View</span> <span class="n">dependency</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//  avatar.setY(dependency.getY());</span>
+        <span class="c1">//  avatar.setBlahBlah(dependency.blah / blah);</span>
+    <span class="o">}</span>    
+<span class="o">}</span>
+</code></pre></div>
+<h2>Resources</h2>
+
+<ul>
+<li><a href="https://github.com/saulmm/CoordinatorBehaviorExample">Coordinator Behavior Example</a> - Github</li>
+<li><a href="https://github.com/saulmm/CoordinatorExamples">Coordinator Examples</a> - Github</li>
+<li><a href="https://lab.getbase.com/introduction-to-coordinator-layout-on-android/">Introduction to coordinator layout on Android</a> - Grzesiek Gajewski</li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3 style="display: inline;"><a href="http://saulmm.github.io/from-design-to-android-part1">From design to android, part 1</a></h3>
+        <small>14 Mar 2017</small>
+      </li>
+    
+      <li>
+        <h3 style="display: inline;"><a href="http://saulmm.github.io/vcs-android-studio">The VCS client of Android Studio</a></h3>
+        <small>13 Oct 2016</small>
+      </li>
+    
+      <li>
+        <h3 style="display: inline;"><a href="http://saulmm.github.io/the-powerful-android-studio">The powerful Android Studio</a></h3>
+        <small>08 Jun 2016</small>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+    </div>
+
+    <script id="dsq-count-scr" src="./Mastering the Coordinator Layout · Saúl Molinero_files/count.js.tải xuống" async=""></script>
+  
+
+</body></html>

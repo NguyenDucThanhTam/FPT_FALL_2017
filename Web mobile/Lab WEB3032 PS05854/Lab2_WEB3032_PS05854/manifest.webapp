@@ -1,0 +1,10 @@
+{
+    "version": "0.1",
+    "name": "Your App",
+    "description": "Your new awesome Open Web App",
+    "launch_path": "/index1.html",
+        "developer": {
+        "name": "Your Name",
+        "url": "http://yourawesomeapp.com"
+    }
+}

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#0080FF"
+        android:text="Đây là Activity thực hiện cuộc gọi"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <EditText 
+        android:id="@+id/txtNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/btnOpenChildActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thực hiện cuộc gọi"
+        android:layout_gravity="center"
+        android:onClick="thucHienCuocGoi" />
+
+</LinearLayout>

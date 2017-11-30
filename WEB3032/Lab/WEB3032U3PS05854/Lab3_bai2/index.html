@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+ <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css">
+  <!-- Include the jQuery library -->
+  <script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+</head> 
+<style>
+	.hinhanh {
+		text-align:center;
+		}
+	.btn-Back{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	width: 65px;
+	height: 45px;
+	left: 525px;
+	z-index:999;
+		}
+		a.ui-link-inherit{
+			display:inline;}
+		#mapsEmbed{
+			text-align:center;
+			padding: 0px; margin:0px;
+			}
+			#map{
+				width: 100%;
+				}
+</style>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header" >
+    
+		<h1 style="padding:10px 0px 10px 0px; margin:0px; font-size:24px; font-weight:bolder; text-align:center;">
+        <a href="#menu"><img src="imgs/menu-icon-8.png" height="30" width="30" style="float:left;">
+        <img src="imgs/p15.png" width="150" height="50" style="float:left; padding: 0px 0px 0px 10px;"></a>
+        Share Document</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page3" style="text-align:center; font-weight:bolder;" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-right">Intro</a></li>
+            <li><a href="#page2" style="text-align:center ; font-weight:bolder;"class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-right">Document</a></li>
+           	
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>All right copy.
+          
+        PS05854 Nguyen Duc Thanh Tam</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+	<a href="#" class="ui-btn" data-rel="back" class="back"><img src="imgs/ic_back.png" height="10" width="20"></a>
+	  <h1 style="text-align:center;">Popular Documents</h1>
+	</div>
+	<div data-role="content">	
+    	<a href="http://ieeexplore.ieee.org/document/6740844/">
+        	Internet of Things for Smart Cities
+        </a><br><br>
+        <a href="http://ieeexplore.ieee.org/document/7140733/">
+        	High-Performance Extreme Learning Machines: A Complete Toolbox for Big Data Applications
+        </a><br><br>
+        <a href="http://ieeexplore.ieee.org/document/7113786/">
+        	The Internet of Things for Health Care: A Comprehensive Survey
+        </a><br><br>
+        <a href="http://ieeexplore.ieee.org/document/7169508/">
+        	A Survey of 5G Network: Architecture and Emerging Technologies
+        </a><br><br>
+        <a href="http://ieeexplore.ieee.org/document/7491252/">
+        	Original Symbol Phase Rotated Secure Transmission Against Powerful Massive MIMO Eavesdropper
+        </a><br><br>
+        <a href="http://ieeexplore.ieee.org/document/6515173/">
+        	Millimeter Wave Mobile Communications for 5G Cellular: It Will Work!
+        </a><br><br>
+		
+       
+        		
+	</div>
+	<div data-role="footer">
+		<h4>All right copy. PS05854 Nguyen Duc Thanh Tam</h4>
+	</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="header">
+	<a href="#" class="ui-btn" data-rel="back" class="back"><img src="imgs/ic_back.png" height="10" width="20"></a>
+	  <h1 style="text-align:center;">Tin Tức Poly</h1>
+	</div>
+	<div data-role="content">	
+    	<div class="hinhanh">
+        	<img src="imgs/Sinh-vien-FPT-Poly-ff8d6.jpg" height="263" width="394" >
+        </div>
+		
+        <form >
+        	<table>
+            	<tr>
+                	<h1 style="text-align:center;">
+                    Hơn 400 sinh viên tham dự Hội thao Happy Bee mừng sinh nhật Cao đẳng FPT Polytechnic
+                    </h1>
+                </tr>
+                <p >
+        Nằm trong chuỗi sự kiện mừng sinh nhật Cao đẳng FPT Polytechnic Hà Nội tuổi lên 7 (13/7/2010 – 13/7/2017) và đẩy mạnh phong trào rèn luyện Thể dục thể thao trong sinh viên, tạo sân chơi bổ ích, thiết thực, đẩy mạnh giao lưu, đoàn kết giữa sinh viên các lớp, phòng Công tác sinh viên Hà Nội và các câu lạc bộ phối hợp tổ chức Hội thao đáng nhớ “7 Bee Poly”.
+        </p>
+        		<tr>
+                	<a href="https://caodang.fpt.edu.vn/poly-goc-nhin/hcm-thu-khoa-kinh-te-dot-2-nam-2017-cach-hoc-quan-trong-hon-ca-viec-sieng-nang-va-thong-minh.html">HCM – Chàng thủ khoa Kinh tế điển trai và bí kíp học hành nhàn tênh nhưng cực kỳ hiệu quả</a>
+                </tr><br><br>
+                <tr>
+                	<a href="https://caodang.fpt.edu.vn/tin-noi-bat/tin-tuc-fpt-polytechnic/sau-4-ngay-so-tan-sinh-vien-nhap-hoc-tai-cao-dang-fpt-polytechnic-tang-tu-1000-len-1500.html">Sau 4 ngày, số tân sinh viên nhập học tại Cao đẳng FPT Polytechnic tăng từ 1000 lên 1500</a>
+                </tr>
+                <br><br>
+                <tr>
+                	<a href="https://caodang.fpt.edu.vn/poly-goc-nhin/hn-chuyen-chua-ke-ve-giang-vien-my-chinh-canh-khoa-kinh-te.html">HN- Chuyện chưa kể về giảng viên “mỳ chính cánh” khoa Kinh tế</a>
+                </tr>
+            </table>
+        </form>
+        		
+	</div>
+	<div data-role="footer">
+		<h4>All right copy. PS05854 Nguyen Duc Thanh Tam</h4>
+	</div>
+</div>
+</body>
+</html>

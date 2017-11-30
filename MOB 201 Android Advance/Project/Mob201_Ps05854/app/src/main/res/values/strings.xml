@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mob201_Ps05854</string>
+    <!-- MAIN Activity-->
+    <string name="btn_lab1_main"> LAB 1</string>
+    <string name="btn_lab2_main"> LAB 2</string>
+    <string name="btn_lab3_main"> LAB 3</string>
+    <string name="btn_lab4_main"> LAB 4</string>
+    <string name="btn_lab5_main"> LAB 5</string>
+    <string name="btn_lab6_main"> LAB 6</string>
+    <string name="btn_lab7_main"> LAB 7</string>
+    <string name="btn_lab8_main"> LAB 8</string>
+
+</resources>

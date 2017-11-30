@@ -1,0 +1,10 @@
+{
+    "version": "0.1",
+    "name": "Bai 2 Lab8",
+    "description": "Your new awesome Open Web App",
+    "launch_path": "/index.html",
+        "developer": {
+        "name": "Your Name",
+        "url": "http://yourawesomeapp.com"
+    }
+}

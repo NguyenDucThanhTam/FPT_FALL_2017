@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ZaloPolyNe</string>
+
+
+    <!-- Spash Screen  -->
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="spash_screen_footer_text">Version 1.0.0</string>
+
+    <string name="button_login_title">LOGIN</string>
+</resources>

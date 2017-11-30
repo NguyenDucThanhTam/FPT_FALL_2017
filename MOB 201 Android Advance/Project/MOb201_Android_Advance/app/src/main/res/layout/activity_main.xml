@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rabbitsoup.mob201_android_advance.MainActivity"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btn_open_lab1_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab1"/>
+    <Button
+        android:id="@+id/btn_open_lab2_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab2"/>
+    <Button
+        android:id="@+id/btn_open_lab3_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab3"/>
+    <Button
+        android:id="@+id/btn_open_lab4_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab4"/>
+    <Button
+        android:id="@+id/btn_open_lab5_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab5"/>
+    <Button
+        android:id="@+id/btn_open_lab6_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab6"/>
+    <Button
+        android:id="@+id/btn_open_lab7_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab7"/>
+    <Button
+        android:id="@+id/btn_open_lab8_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Lab8"/>
+
+
+</LinearLayout>

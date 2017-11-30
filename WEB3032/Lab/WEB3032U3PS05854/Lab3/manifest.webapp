@@ -1,0 +1,10 @@
+{
+    "version": "0.1",
+    "name": "Bai 1 Lab 3 Ps05854",
+    "description": "Your new awesome Open Web App",
+    "launch_path": "/index.html",
+        "developer": {
+        "name": "Your Name",
+        "url": "http://yourawesomeapp.com"
+    }
+}

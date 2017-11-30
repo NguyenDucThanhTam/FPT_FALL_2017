@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rabbitsoup.assignment_ps05854.MainActivity"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF7F00"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Quản Lý Sinh Viên"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#F8F8FF"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm lớp" />
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Xem danh sách lớp" />
+
+        <Button
+            android:id="@+id/btnE"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Quản lý sinh viên" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

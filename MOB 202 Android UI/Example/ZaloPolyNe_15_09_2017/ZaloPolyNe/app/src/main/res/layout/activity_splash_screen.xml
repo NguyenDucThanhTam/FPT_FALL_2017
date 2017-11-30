@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    tools:context="example.com.zalopolyne.SplashScreen"
+    >
+
+    <LinearLayout
+        android:id="@+id/view_fotter_activity_splash"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spash_screen_footer_text"
+            android:textStyle="bold"
+            android:textSize="@dimen/footer_text_size"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@id/view_fotter_activity_splash"
+        android:orientation="vertical"
+        >
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/splashscreen_logo"
+            android:paddingBottom="@dimen/splash_logo_padding_bottom"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

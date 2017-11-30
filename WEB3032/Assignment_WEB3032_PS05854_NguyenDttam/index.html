@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<!--Java Script import-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.js"></script>
+<link href="css/themes/default/jquery.mobile.icons-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/styleDefault.css" rel="stylesheet" type="text/css">
+<!-- jQuery library (served from Google) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="css/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+	</script>
+</head>
+<style>
+	
+	.sp{
+		background: url(imgs/1.jpg);
+	}
+	#silde{
+
+	}
+	</style>
+<body >
+
+<div data-role="page" id="page"  style="padding: 0px; margin: 0px;">
+  <div data-role="header" style="text-align: center; background: #000000" >
+  	<a href="#menuN" style="background: #000000">
+  		<img src="imgs/bullets-white.png">
+  	</a>
+   
+    <img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    <a href="#" style="background: #000000" >
+  		<img src="imgs/search-white.png">
+  	</a>
+  </div>
+  <div data-role="content" style="padding: 0px; margin: 0px;">
+  	<div id="silde">
+  	<ul class="bxslider">
+  <li><img src="imgs/banner2.jpg"/></li>
+  <li><img src="imgs/banner1.jpg"/></li>
+  <li><img src="imgs/banner3.jpg" /></li>
+  <li><img src="imgs/banner4.jpg"/></li>
+</ul>
+  		<div class="neoslideshow">
+  <img src="imgs/3506_post_face___dragon_hunter.png" width=100%/>
+  <img src="imgs/banner1.jpg" width=100%/>
+  <img src="imgs/banner2.jpg" width=100%/>
+	
+</div>
+ 	
+  	</div>
+  	<div id="sanpham">
+ 	  <a href="#pageSP" >
+ 	  	<label>Sản phẩm</label>
+ 	  </a>
+  	  <div class="ui-grid-a">
+  	    <div class="ui-block-a">
+  	    	<a href="#pageSP">
+  	    		<img src="imgs/81Y2PQce4gL._SL1500___32393_zoom.jpg" class="imgP">
+  	    	</a>
+  	    </div>
+  	    <div class="ui-block-b">
+  	 	    	<a href="#pageSP">
+  	 	    		<img src="imgs/msi1.png" class="imgP">
+  	 	    	</a>
+  	    </div>
+      </div>
+  		
+  	  <div data-role="collapsible-set">
+  	      		<a href="index.html#pageSP" class="btnMS">
+  	    			<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-shop" >Sản phẩm nổi bật</button>
+  	    		</a>
+  	    		<a href="index.html#pageSP">
+  	    			<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-shop">Sản phẩm bán chạy</button>
+  	    		</a>
+  	    		<a href="index.html#pageSP">
+  	    			<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-shop">Sản phẩm giảm giá</button>
+  	    		</a>
+      </div>
+  	</div>
+  	<div id="submenu">
+  		
+  	</div>
+  </div>
+  <div data-role="footer" style="text-align: center; background: #000000;padding: 5% 0px 5% 0px">
+    <div class="ui-grid-b">
+      <label>All Right by NDTT PS05854</label>
+    </div>
+  </div>
+  
+  <!--Panner Menu -->
+  <div id="menuN" data-role="panel" data-position="left" data-display="overplay">
+		<div class="frSearch">
+			<form>
+				<input type="search" placeholder="Laptop gaming ....">
+			</form>
+		</div>
+		<li>
+			<a href="#page">
+				<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home" data-rel="close" class="btnPanel">Trang chủ</button>
+			</a>
+		</li>
+		<li >
+			<a href="#pageIntro">
+				<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-info btnPanel"  data-rel="close">Giới thiệu</button>
+			</a>
+		</li>
+		
+		<li >
+			<a href="index.html#pageSP"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-shop btnPanel" data-rel="close" >Sản Phẩm</button></a>
+		</li>
+		<li>
+			<a href="#pageContact"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-user btnPanel"  data-rel="close">Liên hệ</button></a>
+		</li>
+  </div>
+  
+  
+</div><!-- End Page 1-->
+
+
+<!--Page San Pham-->
+  <div data-role="page" id="pageSP">
+    <!--Header trang SanPham-->
+    <div data-role="header" style="text-align: center; background: #000000" >
+  	<a href="#page" style="background: #000000">
+  		<img src="imgs/back-white.png">
+  	</a>
+   
+    <img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    <a href="#" style="background: #000000" >
+  		<img src="imgs/search-white.png">
+  	</a>
+  </div>
+   <!--End header-->
+   
+   
+    <div data-role="content" class="content"><!--Sản phẩm -->
+      <div class="ui-grid-a" id="listProduct">
+        <a href="#pageSP1">
+        	<div class="ui-block-a">
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+            	<img src="imgs/asus1.png" class="avtP" >
+            </div>
+            <div class="ui-block-b">
+            	<ul class="infoP">
+        		<li>
+        			Model: Asus Gaming GL553VD
+        		</li>
+        		<li>
+        			Chip: Core I7 6700HQ
+        		</li>
+        		<li>
+        			Weight: 2.5kg
+        		</li>
+        		<li class="price" style="color: #FF0004">
+        			Price: 22.490.000 VND
+        		</li>
+        	</ul>
+            </div>
+          </div>
+        </div>
+        </a>
+        
+        <a href="#pageSP2">
+        <div class="ui-block-a">
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+            	<img src="imgs/asus2.jpg" class="avtP" >
+            </div>
+            <div class="ui-block-b">
+            	<ul class="infoP">
+        		<li>
+        			Model: Asus Gaming Gl753Xe
+        		</li>
+        		<li>
+        			Chip: Core I7 6700HQ
+        		</li>
+        		<li>
+        			Weight: 2.5kg
+        		</li>
+        		<li class="price" style="color: #FF0004">
+        			Price: 123.000.000đ
+        		</li>
+        	</ul>
+            </div>
+          </div>
+        </div>
+        </a>
+        <a href="#pageSP3">
+        	 <div class="ui-block-a">
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+            	<img src="imgs/asus3.png" class="avtP" >
+            </div>
+            <div class="ui-block-b">
+            	<ul class="infoP">
+        		<li>
+        			Model: Asus Gaming Gl553VX
+        		</li>
+        		<li>
+        			Chip: Core I7 7700HQ
+        		</li>
+        		<li>
+        			Weight: 2.5kg
+        		</li>
+        		<li class="price" style="color: #FF0004">
+        			Price: 25.000.000đ
+        		</li>
+        	</ul>
+            </div>
+          </div>
+        </div>
+        </a>
+		  <a href="#pageSP4">
+		  	 <div class="ui-block-a">
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+            	<img src="imgs/asus4.png" class="avtP" >
+            </div>
+            <div class="ui-block-b">
+            	<ul class="infoP">
+        		<li>
+        			Model: Asus Gaming Gl552
+        		</li>
+        		<li>
+        			Chip: Core I5 6700HQ
+        		</li>
+        		<li>
+        			Weight: 2.5kg
+        		</li>
+        		<li class="price" style="color: #FF0004">
+        			Price: 16.000.000đ
+        		</li>
+        	</ul>
+            </div>
+          </div>
+        </div>
+		  	
+		  </a>
+        
+        
+       
+      </div>
+     
+      
+    	
+    	
+    </div>
+    <div data-role="footer" style="text-align: center; background: #000000;padding: 5% 0px 5% 0px">
+    <div class="ui-grid-b">
+      <label>All Right by NDTT PS05854</label>
+    </div>
+  </div>  
+    
+  </div>
+  
+  <!--PAGE LIÊN HỆ-->
+  <div data-role="page" id="pageContact">
+    <div data-role="header" style="text-align: center; background: #000000" >
+  	<a href="#page" style="background: #000000">
+  		<img src="imgs/back-white.png">
+  	</a>
+   
+    <img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    <a href="#" style="background: #000000" >
+  		<img src="imgs/search-white.png">
+  	</a>
+  </div>
+    <div data-role="content">
+    	<!--Form -->
+    		<div id="formContact" width="80%">
+    			<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>
+				<link href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+				<div id="content">
+    				<h1>Contact</h1>
+    		<form action=" " method="post" autocomplete="on">
+        		<p>
+            		<label for="username" class="icon-user"> Họ Tên :
+                	<span class="required">*</span>
+            		</label>
+            		<input type="text" name="username" id="username" required="required" placeholder="Your Name" />
+        		</p>
+        		<p>
+            		<label for="usermail" class="icon-envelope"> E-mail :
+                	<span class="required">*</span>
+            		</label>
+            		<input type="email" name="usermail" id="usermail" placeholder="I promise I hate spam too!" required="required" />
+        		</p>
+
+        		<p>
+            		<label for="usersite" class="icon-link"> Website của bạn (không bắt buộc)</label>
+            		<input type="url" name="usersite" id="usersite" required="required" />
+        		</p>
+       			<p>
+            		<label for="subject" class="icon-bullhorn"> Subject</label>
+            		<input type="text" name="subject" id="subject" placeholder="What would you like to talk about?" />
+        		</p>
+        		<p>
+            		<label for="message" class="icon-comment"> Phản hồi của bạn :
+                	<span class="required">*</span>
+            		</label>
+            		<textarea placeholder="Your message here and I'll answer as soon as possible " required></textarea>
+        		</p>
+       			<p class="indication">Fields with
+            		<span class="required"> * </span>are required
+            	</p>
+
+        		<input type="submit" value=" Send this mail ! " />
+    		</form>
+				</div>
+    		</div>
+    	<!---->
+    </div>
+    <div data-role="footer" style="text-align: center; background: #000000;padding: 5% 0px 5% 0px">
+    <div class="ui-grid-b">
+      <label>All Right by NDTT PS05854</label>
+    </div>
+  </div>
+  </div>
+			<!--PAGE Intro-->
+<div data-role="page" id="pageIntro">
+		<div data-role="header" style="text-align: center; background: #000000" >
+  		<a href="#page" style="background: #000000">
+  			<img src="imgs/back-white.png">
+  		</a>
+    	<img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    	<a href="#" style="background: #000000" >
+  			<img src="imgs/search-white.png">
+  		</a>
+  		</div>
+		<div data-role="content"><!--NoiDung-->
+			<p style="text-align: center; font-size: 40px; font-weight: 600">
+				Liên Hệ Với Chúng Tôi
+			</p>
+			<div>
+				<p style="text-align: center; font-size: 32px;">
+					1800-209-0655
+				</p><br>
+				 * Sản phẩm hỗ trợ: Tất cả các sản phẩm kinh doanh tại thị trường Việt Nam.<br>
+
+24/7 (không bao gồm ngày nghỉ lễ)<br>
+
+24 giờ trong ngày và 7 ngày trong tuần (không bao gồm ngày nghỉ lễ)<br>
+
+Thông tin trợ giúp:<br>
+
+-	Thông tin sản phẩm <br>
+-	Chính sách bảo hành <br>
+-	Tình trạng sửa chữa <br>
+-	Dịch vụ bảo hành giao nhận tận nơi 2 chiều (PUR service) <br>
+-	Dịch vụ bảo hành tận nơi (Onsite service)<br>
+			</div><br>
+			<label>
+				Hoặc đến với chúng tôi tại địa chỉ:
+			</label>
+			<div id="maps" style="margin: 5% 0px 0px 0px;">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.267084655302!2d106.68020371427929!3d10.790844392311746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d35939c66f%3A0xe52e3ed732b15272!2zRlBUIFBvbHl0ZWNobmljIEhDTSAtIENhbyDEkeG6s25nIHRo4buxYyBow6BuaA!5e0!3m2!1sen!2s!4v1502882419827" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		
+		</div>
+		<div data-role="footer" style="text-align: center; background: #000000">
+      		<label>All Right by PS05854</label>
+   	 	</div>
+	</div>
+			<!--EndPAGE-->
+	<!--SanPham1-->
+	<div data-role="page" id="pageSP1">
+	  <div data-role="header" style="text-align: center; background: #000000" >
+  		<a href="#pageSP" style="background: #000000">
+  			<img src="imgs/back-white.png">
+  		</a>
+    	<img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    	<a href="#" style="background: #000000" >
+  			<img src="imgs/search-white.png">
+  		</a>
+  		</div>
+	  <div data-role="content" class="sp">
+	  	<img src="imgs/logo.png" width=100%>
+	  	<img src="imgs/1.jpg" width=100%>
+	  	<p class="insoweDec" style="text-align: center">ROG Strix GL553 được cài đặt sẵn Windows 10 và có một bộ vi xử lý Intel
+	  	<sup>®</sup>
+	  	 Core™ i7 lõi tứ thế hệ thứ 7, đồ họa NVIDIA
+	  	 <sup>®</sup> GeForce
+	  	 <sup>®</sup> GTX 1050 cùng hỗ trợ toàn diện đối với Microsoft
+	  	 <sup>®</sup> DirectX
+	  	 <sup>®</sup> 12 cho bạn hiệu năng mạnh mẽ và hình ảnh hoàn hảo trong game.</p>
+	  	 <br>
+			<div style="text-align: center">
+				<img src="imgs/345.png" width=50%>
+	  	 		<p class="text">”Màn hình IPS xuất sắc cho game thủ hoặc người thiết kế đồ họa. Bàn phím tuyệt vời với RGB”</p>
+			</div>
+	  	 <span class="priceSP" style="text-align: center">22.490.000 VND</span>
+	  </div>
+	  <div data-role="footer" style="text-align: center; background: #000000">
+      		<label>All Right by PS05854</label>
+   	 </div>
+</div>
+<div data-role="page" id="pageSP2">
+	  <div data-role="header" style="text-align: center; background: #000000" >
+  		<a href="#pageSP" style="background: #000000">
+  			<img src="imgs/back-white.png">
+  		</a>
+    	<img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    	<a href="#" style="background: #000000" >
+  			<img src="imgs/search-white.png">
+  		</a>
+  		</div>
+	  <div data-role="content" class="sp">
+	  	<img src="imgs/logo2.png" width=100%>
+	  	<img src="imgs/551.jpg" width=100%>
+	  	<p class="insoweDec"><br>ROG Strix GL753 được cài đặt sẵn Windows 10 và có một bộ vi xử lý Intel<sup>®</sup> Core™ i7 lõi tứ thế hệ thứ 7, đồ họa NVIDIA<sup>®</sup> GeForce<sup>®</sup> GTX 1050Ti cùng hỗ trợ toàn diện đối với Microsoft<sup>®</sup> 
+	  	 <br>
+			<div style="text-align: center">
+				<img src="imgs/345.png" width=50%>
+	  	 		<p class="text">”Màn hình IPS xuất sắc cho game thủ hoặc người thiết kế đồ họa. Bàn phím tuyệt vời với RGB”</p>
+			</div>
+	  	 <span class="priceSP" style="text-align: center">22.490.000 VND</span>
+	  </div>
+	  <div data-role="footer" style="text-align: center; background: #000000">
+      		<label>All Right by PS05854</label>
+   	 </div>
+</div>
+
+<!--sp3-->
+	<div data-role="page" id="pageSP3">
+	  <div data-role="header" style="text-align: center; background: #000000" >
+  		<a href="#pageSP" style="background: #000000">
+  			<img src="imgs/back-white.png">
+  		</a>
+    	<img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    	<a href="#" style="background: #000000" >
+  			<img src="imgs/search-white.png">
+  		</a>
+  		</div>
+	  <div data-role="content" class="sp">
+	  	<img src="imgs/701.png" width=100%>
+	  	<img src="imgs/720.jpg" width=100%>
+	  	<p class="insoweDec"><br>ROG Strix GL753 được cài đặt sẵn Windows 10 và có một bộ vi xử lý Intel<sup>®</sup> Core™ i7 lõi tứ thế hệ thứ 7, đồ họa NVIDIA<sup>®</sup> GeForce<sup>®</sup> GTX 1050Ti cùng hỗ trợ toàn diện đối với Microsoft<sup>®</sup> 
+	  	 <br>
+			<div style="text-align: center">
+				<img src="imgs/345.png" width=50%>
+	  	 		<p class="text">”Màn hình IPS xuất sắc cho game thủ hoặc người thiết kế đồ họa. Bàn phím tuyệt vời với RGB”</p>
+			</div>
+  	 	<div>
+  	 		<img src="imgs/7201.png" width=100%>
+  	 		<h1><span class="together">Máy tính xách tay chơi game</span> GTX 980 phong cách và linh động</h1><br>
+  	 		<p>ROG G701 là mẫu máy tính xách tay chơi game linh động và phong cách với đồ họa NVIDIA<sup>®</sup> GeForce<sup>®</sup> GTX<sup>™</sup> 980. G701 chạy trên nền một bộ vi xử lý Intel Core i7 K-series với khả năng ép xung cho hiệu năng chơi game như máy tính để bàn. Và không chỉ có vậy. So với các máy tính xách tay GeForce GTX 980 khác, G701 khá mảnh, chỉ mỏng có 1,4 inch. Hiệu năng cực đại, phong cách tuyệt vời và tính linh động đáng kinh ngạc — G701 có mọi thứ bạn cần để thống lĩnh ở bữa tiệc game LAN tiếp theo!</p>
+  	 	</div>
+	  	 <span class="priceSP" style="text-align: center">123.490.000 VND</span>
+	  </div>
+	  <div data-role="footer" style="text-align: center; background: #000000">
+      		<label>All Right by PS05854</label>
+   	 </div>
+</div>
+
+<!--SP4-->
+<div data-role="page" id="pageSP4">
+	  <div data-role="header" style="text-align: center; background: #000000" >
+  		<a href="#pageSP" style="background: #000000">
+  			<img src="imgs/back-white.png">
+  		</a>
+    	<img src="imgs/laptopcenter_sua_laptop_uy_tin_logo (1).png" style="height: 40px;">
+    	<a href="#" style="background: #000000" >
+  			<img src="imgs/search-white.png">
+  		</a>
+  		</div>
+	  <div data-role="content" class="sp">
+	  	<img src="imgs/502.png" width=100%>
+	  	<img src="imgs/asus_gl552jx_6(1).png" width=100%>
+	  	<article class="text">
+                                    <h1>Chơi Game Không Giới Hạn</h1>
+                                    <p align="right">Hiệu năng chơi game tối ưu, thiết kế chi tiết, chất lượng hình ảnh hoàn hảo và nâng cấp tức thời. ROG GL552 luôn sẵn sàng cho hoạt động giải trí.
+									<br><br>
+<a style="text-decoration:none; font-size:30px;margin-bottom: 0px;margin-right: 0px; color:#FF0000">18,349,000 VNĐ</a><br><br>
+  <a href="http://www.asus.com/vn/Terms_of_Use_Notice_Privacy_Policy/where-to-buy-ROG/" target="_top" style="text-decoration:none; font-size:30px;margin-bottom: 0px;margin-right: 0px; color:#FF0000">Mua Ngay</a><br>  <br>
+
+<a href="http://www.asus.com/event/2016/productguide/vn/ROGBooklet-Feb22-light-version.pdf" target="_blank" style="font-family: 'Roboto', sans-serif; font-size:24px; color:#06F">Download catalogue sản phẩm</a> <br><br>
+<a href="https://www.youtube.com/watch?v=PhKx-4p-MTc" target="_blank" class="video zfvideo" style="text-decoration:none; font-size:17px;margin-bottom: 0px;margin-right: 0px; color:#00F">Đánh giá nhanh sản phẩm</a><br>
+<a href="http://gamek.vn/gaming-gear/danh-gia-laptop-choi-game-asus-gl552j-xung-danh-republic-of-gamers-20150728225035619.chn" target="_blank" style="text-decoration:none; font-size:17px;margin-bottom: 0px;margin-right: 0px; color:#00F">GameK - Đánh giá chi tiết</a><br>
+<a href="http://www.techz.vn/danh-gia-asus-rog-gl552jx-hieu-nang-cao-gia-hap-dan-ylt43438.html" target="_blank" style="text-decoration:none; font-size:17px;margin-bottom: 0px;margin-right: 0px; color:#00F">TechZ - Đánh giá hiệu năng</a><br></p>
+                                </article>
+	  	 <br>
+			<div style="text-align: center">
+				<img src="imgs/345.png" width=50%>
+	  	 		<p class="text">”Màn hình IPS xuất sắc cho game thủ hoặc người thiết kế đồ họa. Bàn phím tuyệt vời với RGB”</p>
+			</div>
+  	 	<div>
+  	 		<img src="imgs/7201.png" width=100%>
+  	 		<h1><span class="together">Máy tính xách tay chơi game</span> GTX 980 phong cách và linh động</h1><br>
+  	 		<p>ROG G701 là mẫu máy tính xách tay chơi game linh động và phong cách với đồ họa NVIDIA<sup>®</sup> GeForce<sup>®</sup> GTX<sup>™</sup> 980. G701 chạy trên nền một bộ vi xử lý Intel Core i7 K-series với khả năng ép xung cho hiệu năng chơi game như máy tính để bàn. Và không chỉ có vậy. So với các máy tính xách tay GeForce GTX 980 khác, G701 khá mảnh, chỉ mỏng có 1,4 inch. Hiệu năng cực đại, phong cách tuyệt vời và tính linh động đáng kinh ngạc — G701 có mọi thứ bạn cần để thống lĩnh ở bữa tiệc game LAN tiếp theo!</p>
+  	 	</div>
+	  	 <span class="priceSP" style="text-align: center">20.490.000 VND</span>
+	  </div>
+	  <div data-role="footer" style="text-align: center; background: #000000">
+      		<label>All Right by PS05854</label>
+   	 </div>
+</div>
+	
+  
+</body>
+</html>

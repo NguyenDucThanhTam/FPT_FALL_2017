@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rabbitsoup.mob201_android_advance.Lab1.Activity_Lab1_Main">
+
+    <Button
+        android:id="@+id/btn_open_exercise1_Lab1_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openExercise1"
+        />
+    <Button
+        android:id="@+id/btn_open_exercise2_Lab1_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openExercise2"
+        />
+    <Button
+        android:id="@+id/btn_open_exercise3_Lab1_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openExercise3"
+        />
+    <Button
+        android:id="@+id/btn_open_exercise4_Lab1_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openExercise4"
+        />
+</LinearLayout>

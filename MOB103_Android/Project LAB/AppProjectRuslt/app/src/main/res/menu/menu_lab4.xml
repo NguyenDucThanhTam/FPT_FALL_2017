@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="Xem Điểm Lab">
+        <menu>
+            <item android:id="@+id/lab1"
+                android:title="Lab 1">
+
+            </item>
+            <item
+                android:id="@+id/lab2"
+                android:title="Lab 2">
+
+            </item>
+            <item
+                android:id="@+id/lab3"
+                android:title="Lab 3">
+
+            </item>
+            <item
+                android:id="@+id/lab4"
+                android:title="Lab 4">
+
+            </item>
+            <item
+                android:id="@+id/lab5"
+                android:title="Lab 5">
+
+            </item>
+            <item
+                android:id="@+id/lab6"
+                android:title="Lab 6">
+
+            </item>
+            <item
+                android:id="@+id/lab7"
+                android:title="Lab 7">
+
+            </item>
+            <item
+                android:id="@+id/lab8"
+                android:title="Lab 8">
+
+            </item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item2"
+        android:title="Xem Điểm Quizs">
+        <menu>
+            <item android:id="@+id/quiz1"
+                android:title="Quiz 1">
+
+            </item>
+            <item
+                android:id="@+id/quiz2"
+                android:title="Quiz 2">
+
+            </item>
+            <item
+                android:id="@+id/quiz3"
+                android:title="Quiz 3">
+
+            </item>
+            <item
+                android:id="@+id/quiz4"
+                android:title="Quiz 4">
+
+            </item>
+            <item
+                android:id="@+id/quiz5"
+                android:title="Quiz 5">
+
+            </item>
+            <item
+                android:id="@+id/quiz6"
+                android:title="Quiz 6">
+
+            </item>
+            <item
+                android:id="@+id/quiz7"
+                android:title="Quiz 7">
+
+            </item>
+            <item
+                android:id="@+id/quiz8"
+                android:title="Quiz 8">
+
+            </item>
+        </menu>
+    </item>
+</menu>

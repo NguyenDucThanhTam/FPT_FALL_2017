@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/maxresdefault"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF7F00"
+        android:text="Quản lý sinh viên"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:layout_marginTop="30sp"
+        android:background="@drawable/avb"
+        android:layout_height="103dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:id="@+id/btnthemlop"
+        android:layout_width="217dp"
+        android:layout_gravity="center"
+        android:text="Thêm lớp"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_marginTop="10sp"
+        android:id="@+id/btnXemDanhSach"
+        android:layout_gravity="center"
+        android:layout_width="217dp"
+        android:background="@drawable/avb"
+        android:layout_height="123dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="Xem danh sách lớp"
+        android:textSize="20sp"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/btnquanly"
+        android:layout_marginTop="10sp"
+        android:layout_gravity="center"
+        android:layout_width="219dp"
+        android:background="@drawable/avb"
+        android:layout_height="123dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:onClick="managerForm"
+        android:text="Quản lý sinh viên"
+        android:textSize="20sp" />
+
+</LinearLayout>

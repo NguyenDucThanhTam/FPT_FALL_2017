@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rabbitsoup.mob201_ps05854.MainActivity">
+
+    <Button android:id="@+id/btn_lab1_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab1_main"></Button>
+
+    <Button
+        android:id="@+id/btn_lab2_Main_Activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_lab2_main"></Button>
+
+    <Button android:id="@+id/btn_lab3_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab3_main"></Button>
+
+    <Button android:id="@+id/btn_lab4_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab4_main"></Button>
+
+    <Button android:id="@+id/btn_lab5_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab5_main"></Button>
+
+    <Button android:id="@+id/btn_lab6_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab6_main"></Button>
+
+    <Button android:id="@+id/btn_lab7_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab7_main"></Button>
+
+    <Button android:id="@+id/btn_lab8_Main_Activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btn_lab8_main"></Button>
+
+
+</LinearLayout>

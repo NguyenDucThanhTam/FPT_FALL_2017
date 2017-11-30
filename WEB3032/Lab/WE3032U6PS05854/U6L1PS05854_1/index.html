@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/themes/default/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile.icons-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/themes/default/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
+<script src="../jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+</head>
+<style>
+	#header{
+		display: block;
+	}	
+	.inputO{
+		background: #FFB90F;
+		margin-top: 10px;
+	}
+	#footer{
+		background-color: #B8860B; 
+	}
+	.inputO h3{
+		margin-top: 10px;
+		box-shadow: 2px 5px 2px #8B6914;
+		border: 0px ;
+		color: white;
+	}
+	a{
+		color: #FFFFFF
+	}
+	.btnadds{
+		border: 0px solid black;
+	}
+</style>
+<body style="background: #B8860B">
+<div data-role="page" id="page2" style="padding: 0px;">
+  <div data-role="header" id="header" style="width: 100%;padding: 0px;margin: 0px;">
+    <div class="ui-grid-a" style="width: 100%;">
+      <div class="ui-block-a" style="text-align: center; height: auto; width: 100%;">
+      	<img src="imgs/logo.png" width="80%">
+      </div>
+      <div class="ui-block-a" style="width: 100%;">
+        <div class="ui-grid-a">
+          <div class="ui-block-a" style="width: 30%">
+          	
+          </div>
+          <div class="ui-block-b" style="width: 70%;">
+            <div class="ui-grid-a">
+              <div class="ui-block-a" style="float: left;width: 80%;">
+              	<input type="text" id="txtSearchr" placeholder="Search">
+              </div>
+              <div class="ui-block-b" style="width: auto; padding: 5px 0px 0px 5px;" >
+              	<img src="imgs/search-icon.png" width="32px" height="32px" >
+              </div>
+            </div>
+          	
+          </div>
+        </div>
+      	
+      </div>
+    </div>
+   	
+    
+    <div id="search" style="display: block">
+    	
+    	
+    </div>
+  </div>
+  
+<!--Body-->
+  <div data-role="content" style="padding: 0px;margin: 0px">
+    <div data-role="collapsible-set">
+      <div  data-role="collapsible" data-iconpos="right" class="inputO" >
+        <h3 class="ui-btn ui-icon-home ui-btn-icon-right ui-shadow ui-corner-all" style="color: white">Trang chủ</h3>
+        <p style="text-align: center;color: #A70387;font-size: 30px; font-weight: 900">About us</p>
+        <p> Send flowers same day, designed and hand delivered by local FTD florists. Same day flower delivery available in USA and Canada if placed before noon. Regular delivery hours for a florist are between 9:00 AM and 6:00 PM. Sunday and legal holiday delivery cannot be guaranteed the same day and will be made the next day. Fedex or UPS marked gifts such as the Occasion Baskets, New Baby Baskets are delivered the next business day. <br>
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+          	<img src="imgs/21-0365AA-shop_photo1.jpg" width="100%">
+          </div>
+          <div class="ui-block-b" style="text-align: center">
+          	Monday:  Open 24HR<br>
+Tuesday:  Open 24HR<br>
+Wednesday:  Open 24HR<br>
+Thursday:  Open 24HR<br>
+Friday:  Open 24HR<br>
+Saturday:  Open 24HR<br>
+Sunday:  Closed<br><br>
+          </div><br><br>
+          <p>
+          <br>
+          <ul>
+          	<li>
+          		We offer the largest network of florists in the world
+          	</li>
+          	<li>
+          		Hand-delivery by professional local florists
+          	</li>
+          	<li>
+          		Order online or call us 24 hours a day
+          	</li>
+          	<li>
+          		Committed to Quality and Service
+          	</li>
+          	<li>
+          		Personalized Care with Each Order
+          	</li>
+          	<li>
+          		Enjoy the Convenience of Ordering Online
+          	</li>
+			</ul>
+
+          </p>
+        </div>
+        </p>
+      </div>
+       <div  data-role="collapsible" data-iconpos="right" class="inputO" >
+        <h3 class="ui-btn ui-icon-shop ui-btn-icon-right ui-shadow ui-corner-all" style="text-align: center">Sản Phẩm</h3>
+        <p style="text-align: center;color: #A70387;font-size: 30px; font-weight: 900">Sản Phẩm Của Chúng Tôi</p>
+        <div class="ui-grid-a">
+              <div class="ui-block-a">
+              		<div id="products">
+			  			<img src="imgs/1.jpg">
+			  		</div>
+              </div>
+              <div class="ui-block-a">
+              	1 Dozen Roses
+              </div>
+              <div class="ui-block-a" style="color: #E10003;">
+              	Sale Price! $59.99
+              </div>
+            </div>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+              		<div id="products">
+			  			<img src="imgs/2.jpg">
+			  		</div>
+              </div>
+              <div class="ui-block-a">
+              	The FTD® Precious Heart™ Bouquet
+              </div>
+              <div class="ui-block-a" style="color: #E10003;">
+              	US 44.99
+              </div>
+            </div>
+              
+			  <div class="ui-grid-a">
+              <div class="ui-block-a">
+              		<div id="products">
+			  			<img src="imgs/3.jpg">
+			  		</div>
+              </div>
+              <div class="ui-block-a">
+              	The FTD® Blooming Masterpiece™ Rose Bouquet
+              </div>
+              <div class="ui-block-a" style="color: #E10003;">
+              	US 64.99 
+              </div>
+            </div>
+
+        </p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-iconpos="right" class="inputO">
+        <h3 class="ui-btn ui-icon-info ui-btn-icon-right ui-shadow ui-corner-all">Giới Thiệu</h3>
+        <div data-role="collapsible-set" data-iconpos="right">
+          
+          <div data-role="collapsible" data-collapsed="true" data-iconpos="right">
+            <h3>Flower for Event</h3>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+              		<div id="products">
+			  			<img src="imgs/3.jpg">
+			  		</div>
+              </div>
+              <div class="ui-block-a">
+              	1 Dozen Roses
+              </div>
+              <div class="ui-block-a" style="color: #E10003;">
+              	Sale Price! $59.99
+              </div>
+            </div>
+            
+          </div>
+          <div data-role="collapsible" data-collapsed="true" data-iconpos="right">
+            <h3>Flower for Wedding</h3>
+            <div class="ui-grid-a">
+              <div class="ui-block-a">
+              		<div id="products">
+			  			<img src="imgs/4.jpg">
+			  		</div>
+              </div>
+              <div class="ui-block-a">
+              	1 Dozen Roses
+              </div>
+              <div class="ui-block-a" style="color: #E10003;">
+              	Sale Price! $59.99
+              </div>
+            </div>
+          </div>
+        </div>
+        	
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-iconpos="right" class="inputO">
+        <h3 class="ui-btn ui-icon-grid ui-btn-icon-right ui-shadow ui-corner-all">Bộ Sưu Tập</h3>
+        <div class="ui-grid-a">
+    <div class="ui-block-a">
+    	Contact Us<br>
+		Toll Free: 800-414-4205<br>
+		24hr: 800-414-4205<br>
+
+    </div>
+    <div class="ui-block-b">Block 1,2</div>
+  </div>
+      </div>
+      <div data-role="collapsible" data-collapsed="true" data-iconpos="right" class="inputO">
+        <h3 class="ui-btn ui-icon-user ui-btn-icon-right ui-shadow ui-corner-all">Liên Hệ</h3>
+        <!--Form Registẻ-->
+        
+        <div id="form_login" style="align-content: center;">
+       	<form action="index.html">
+       	 <table>
+        	<tr>
+        		<td>
+        			<input type="text" class="user" placeholder="First Name" required/>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>
+        			<input type="text" class="add" placeholder="Last Name" required/>
+        		</td>
+       	  </tr>
+        	<tr>
+        		<td>
+        			<input type="text" placeholder="Address" required>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>
+        			<input type="email" class="add" placeholder="Email" required/>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>
+        			<input type="number" class="add" placeholder="Phone" required/>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>
+        			<label> Birthday:</label>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>
+        			<form>
+        				<table>
+        					<tr>
+        						<td>
+        							<select>
+        								<option>
+        										1
+        								</option>
+        								<option>
+        										2
+        								</option>
+        								<option>
+        										3
+        								</option>
+        								<option>
+        									....
+        								</option>
+        								<option>
+        										10
+        								</option>
+        								<option>
+        									....
+        								</option>
+        								<option>
+        										30
+        								</option>
+        								<option>
+        										...
+        								</option>
+        							</select>
+        						</td>
+        						<td>
+        							<select>
+        								<option>
+        										1
+        								</option>
+        								<option>
+        										2
+        								</option>
+        								<option>
+        										3
+        								</option>
+        								<option>
+        										4
+        								</option>
+        								<option>
+        										5
+        								</option>
+        								<option>
+        										...
+        								</option>
+        							</select>
+        						</td>
+        						<td>
+        						<select>
+        							<option>
+        									2000
+        							</option>
+        							<option>
+        									2003
+        							</option>
+        							<option>
+        									2004
+        							</option>
+        							<option>
+        									<2005></2005>
+        							</option>
+        							<option>
+        									2006
+        							</option>
+        							<option>
+        									...
+        							</option>
+        							<option>
+        									2008
+        							</option>
+        							<option>
+        									2010
+        							</option>
+        						</select>
+        							
+        						</td>
+        					</tr>
+        				</table>
+        			</form>
+        		</td>
+        	</tr>
+        	<tr>
+				<td><input type="reset" class="btnadds" value="Reset" style="width: 100%"></td>
+        	</tr>
+        	<tr>
+        		<td>
+        			<input type="submit" class="btnadds" style="width: 100%" value="Gửi">
+        		</td>
+			 </tr>
+        </table>
+       </form>
+       </div>
+       
+       <!--End-->
+      </div>
+      <!--<div data-role="collapsible" data-collapsed="true" data-iconpos="right" class="inputO">
+        <h3>Liên Hệ</h3>
+        <div class="ui-grid-a">
+    <div class="ui-block-a">
+    	Contact Us<br>
+		Toll Free: 800-414-4205<br>
+		24hr: 800-414-4205<br>
+
+    </div>
+    <div class="ui-block-b">Block 1,2</div>
+  </div>
+      </div>-->
+    </div>
+  	
+  </div>
+  <div data-role="footer" id="footer">
+    <h4>Lab6_PS05854</h4>
+  </div>
+</div>
+
+</body>
+</html>
